@@ -1,0 +1,13 @@
+{
+  "slug": "securing-llm-controlled-systems",
+  "title": "Securing LLM-Controlled Systems: Why Traditional Red-Teaming Is Not Enough",
+  "excerpt": "As AI systems take control of physical hardware and critical infrastructure, the attack surfaces expand in ways that static pen-testing frameworks weren't designed to find.",
+  "category": "Cybersecurity",
+  "format": "Research Brief",
+  "author": "PHEXARA Team",
+  "date": "2026-06-10",
+  "readTime": "6 min read",
+  "coverImage": "",
+  "featured": false,
+  "content": "## A new kind of attack surface\n\nTraditional penetration testing assumes a relatively fixed set of entry points — APIs, network boundaries, authentication flows. LLM-controlled systems break that assumption.\n\nWhen a language model has agency over physical hardware or critical infrastructure — triggering actuators, adjusting industrial parameters, executing financial transactions — the attack surface becomes the model's *behaviour space*, not just its code.\n\n## Where static testing falls short\n\n- **Prompt injection** through indirect channels (documents, sensor data, third-party feeds) that a static scan won't catch\n- **Emergent behaviour** under adversarial inputs that don't resemble known exploit patterns\n- **Context poisoning** across multi-turn interactions, which single-shot testing misses entirely\n\n## What we recommend instead\n\nContinuous, adversarial red-teaming that treats the model as a living system rather than a fixed target — including automated fuzzing of natural-language attack surfaces, monitoring for behavioural drift post-deployment, and treating every external data source the model touches as untrusted input.\n\nThe organisations getting ahead of this are the ones that stopped treating AI security as an extension of application security, and started treating it as its own discipline."
+}

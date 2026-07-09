@@ -1,0 +1,13 @@
+{
+  "slug": "digital-twins-critical-infrastructure",
+  "title": "Digital Twins in Critical Infrastructure: Opportunity and Security Challenge",
+  "excerpt": "Digital twin adoption in utilities, manufacturing, and transport is accelerating. But connecting virtual models to live systems creates attack surfaces that security teams are only beginning to understand.",
+  "category": "Digital Twins",
+  "format": "Technical Insight",
+  "author": "PHEXARA Team",
+  "date": "2026-05-28",
+  "readTime": "5 min read",
+  "coverImage": "",
+  "featured": false,
+  "content": "## The promise\n\nDigital twins let operators simulate, predict, and optimise physical systems before committing changes to the real world — reducing downtime, catching failures early, and improving efficiency across utilities, manufacturing, and transport networks.\n\n## The overlooked risk\n\nEvery digital twin needs a live data connection back to the physical asset it mirrors. That bidirectional link — often built for speed and convenience rather than security — becomes a new pathway into operational technology (OT) environments that were historically air-gapped.\n\n## What good practice looks like\n\n- Treat the twin-to-asset connection as a security boundary, not an internal pipe\n- Apply the same access controls and monitoring to simulation environments as production ones\n- Validate that write-back capabilities (twin → physical system) are scoped as narrowly as possible\n\nDigital twins are one of the highest-value applications of connected intelligence in industrial settings — but only if the security model keeps pace with the connectivity."
+}

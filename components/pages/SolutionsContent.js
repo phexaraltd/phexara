@@ -6,7 +6,7 @@ import Link from "next/link";
 const SOL_NAV_LINKS = [
   { id: "software", label: "Software Development" },
   { id: "ai-gov", label: "AI Governance" },
-  { id: "twins", label: "Digital Twins" },
+  // { id: "twins", label: "Digital Twins" },
   { id: "security", label: "Cloud Security" },
   { id: "commerce", label: "Smart Commerce" },
   { id: "edge", label: "Edge AI & IoT" },
@@ -119,7 +119,7 @@ export default function SolutionsContent() {
   </section>
 
   {/* 03 DIGITAL TWINS */}
-  <section className="sol-section" id="twins">
+  {/* <section className="sol-section" id="twins">
     <div className="sol-inner">
       <div className="sol-meta" data-anim="fade-left">
         <div className="sol-number">03 / 06</div>
@@ -147,13 +147,13 @@ export default function SolutionsContent() {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
   {/* 04 CLOUD SECURITY */}
   <section className="sol-section" id="security">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
-        <div className="sol-number">04 / 06</div>
+        <div className="sol-number">03 / 06</div>
         <h2 className="sol-title-lg">Cloud & Application Security</h2>
         <p className="sol-body">Enterprise-grade protection built into every layer of your digital stack. Our security practice combines deep offensive knowledge with robust defensive architecture — providing the full picture that organizations need to stay resilient.</p>
         <p className="sol-body">From penetration testing to zero trust architecture, we build security programs that scale with your organization.</p>
@@ -184,7 +184,7 @@ export default function SolutionsContent() {
   <section className="sol-section" id="commerce">
     <div className="sol-inner">
       <div className="sol-meta" data-anim="fade-left">
-        <div className="sol-number">05 / 06</div>
+        <div className="sol-number">04 / 06</div>
         <h2 className="sol-title-lg">Smart Commerce Infrastructure</h2>
         <p className="sol-body">End-to-end infrastructure enabling brands to predict consumer behaviour, automate engagement, and secure transactions. We combine AI-powered analytics with robust commerce platforms to drive measurable business outcomes.</p>
         <p className="sol-body">Built for retailers, marketplaces, and financial service providers navigating the future of intelligent commerce.</p>
@@ -215,7 +215,7 @@ export default function SolutionsContent() {
   <section className="sol-section" id="edge">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
-        <div className="sol-number">06 / 06</div>
+        <div className="sol-number">05 / 06</div>
         <h2 className="sol-title-lg">Edge AI & Intelligent IoT</h2>
         <p className="sol-body">AI-powered connected environments that process, reason, and act at the edge — where decisions must happen in milliseconds and connectivity cannot be assumed. We build distributed intelligence systems for the physical world.</p>
         <p className="sol-body">From smart cities to industrial manufacturing, our edge AI platforms bring intelligence to the devices, environments, and systems that matter most.</p>

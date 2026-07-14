@@ -14,7 +14,7 @@ const PROJECTS = [
     desc: "An autonomous threat detection and intelligent response infrastructure that combines AI-powered analysis with real-time security orchestration. Designed to reduce mean time to detection and automate incident response at scale.",
     tags: [" HCI & Adaptive Learning."],
     progress: 30,
-    launch: "Q3 2025",
+    launch: "Q3 2026",
   },
   {
     num: "PROJECT 002",
@@ -26,7 +26,7 @@ const PROJECTS = [
     desc: "A real-time simulation and predictive maintenance platform for industrial assets. The engine creates living virtual models of physical systems that anticipate failures, optimise performance, and guide operational decisions.",
     tags: ["Real-Time Simulation", "Predictive ML", "IoT Integration", "3D Visualisation", "Anomaly Detection"],
     progress: 15,
-    launch: "Q4 2025",
+    launch: "Q1 2027",
   },
   // {
   //   num: "PROJECT 003",
@@ -201,31 +201,38 @@ export default function ProjectsContent() {
           <div data-anim="fade-right">
             <div className="vision-timeline">
               <div className="vt-item">
-                <div className="vt-year">2024</div>
+                <div className="vt-year">2024-2025</div>
                 <div>
                   <div className="vt-content-label">Foundation</div>
                   <div className="vt-content-text">Company formation, team building, core technology stack selection, initial R&amp;D, and security framework design.</div>
                 </div>
               </div>
               <div className="vt-item">
-                <div className="vt-year">2025</div>
+                <div className="vt-year"> 2026 Q1/Q2</div>
                 <div>
                   <div className="vt-content-label">Launch Phase</div>
-                  <div className="vt-content-text">AI Security Platform and Digital Twin Engine entering production. First enterprise clients onboarded. Research publications launched.</div>
+                  <div className="vt-content-text"> HCI & Adaptive Learning solution entering production. Documentation and test trials being implemented.</div>
                 </div>
               </div>
               <div className="vt-item">
-                <div className="vt-year">2026</div>
+                <div className="vt-year">2026 Q3</div>
                 <div>
                   <div className="vt-content-label">Expansion Phase</div>
-                  <div className="vt-content-text">Smart Commerce Suite and AI Governance Framework launch. Edge Intelligence Network in development. International market entry begins.</div>
+                  <div className="vt-content-text">MVP launched. Pilot phased rolled out to target audience.</div>
                 </div>
               </div>
-              <div className="vt-item" style={{ borderBottom: "none" }}>
-                <div className="vt-year">2027+</div>
+              <div className="vt-item" >
+                <div className="vt-year">2027 Q1</div>
                 <div>
                   <div className="vt-content-label">Scale Phase</div>
-                  <div className="vt-content-text">Platform integration and unified ecosystem launch. Government and enterprise contracts. Global operations from multiple regions.</div>
+                  <div className="vt-content-text">Expansion begins. Core tiers of the flagship solution enters expansion to other market demand areas. Applied AI & Vertical SaaS solution commences production. </div>
+                </div>
+              </div>
+                 <div className="vt-item" style={{ borderBottom: "none" }}>
+                <div className="vt-year">2027+</div>
+                <div>
+                  <div className="vt-content-label">Global Market</div>
+                  <div className="vt-content-text">Platform integration and unified ecosystem launch. Government and enterprise contracts. International market entry begins. Global operations from multiple regions. </div>
                 </div>
               </div>
             </div>

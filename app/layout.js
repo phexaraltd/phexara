@@ -9,9 +9,9 @@ import SiteEffects from "@/components/SiteEffects";
 export const metadata = {
   metadataBase: new URL("https://www.phexara.co.uk"),
   icons: {
-    icon: "/phexaraicon.png",
-    shortcut: "/phexaraicon.png",
-    apple: "/phexaraicon.png",
+    icon: "/phexarafour.png",
+    shortcut: "/phexarafour.png",
+    apple: "/phexarafour.png",
   },
   title: {
     default: "PHEXARA, LTD — Engineering Intelligent Systems",

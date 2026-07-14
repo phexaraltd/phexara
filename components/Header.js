@@ -1,11 +1,9 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import "./header.css"
 const NAV_LINKS = [
-  // { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
   { href: "/projects", label: "Projects" },
@@ -41,21 +39,25 @@ export default function Header() {
   return (
     <>
       <nav className={`nav${scrolled ? " scrolled" : ""}`} id="main-nav">
-        <Link href="/" className="nav-logo">
+            <Link href="/" className="nav-logo">
           <img src="/phexaraicon.png" alt="PHEXARA, LTD" className="nav-logo-img" />
         </Link>
+
         <ul className="nav-links">
+          <li>
+            <Link href="/" className={isActive("/") ? "active" : undefined}>
+              Home
+            </Link>
+          </li>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                style={isActive(link.href) ? { color: "var(--black)", fontWeight: 500 } : undefined}
-              >
+              <Link href={link.href} className={isActive(link.href) ? "active" : undefined}>
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
+
         <div className="nav-right">
           <Link href="/contact" className="nav-btn">
             <span>Contact Us</span>
@@ -71,9 +73,13 @@ export default function Header() {
           </button>
         </div>
       </nav>
+
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
+        <Link href="/" className={isActive("/") ? "active" : undefined}>
+          Home
+        </Link>
         {NAV_LINKS.map((link) => (
-          <Link key={link.href} href={link.href}>
+          <Link key={link.href} href={link.href} className={isActive(link.href) ? "active" : undefined}>
             {link.label}
           </Link>
         ))}

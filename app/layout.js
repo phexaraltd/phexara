@@ -18,11 +18,11 @@ export const metadata = {
     template: "%s — PHEXARA, LTD",
   },
   description:
-    "PHEXARA develops advanced ethnical AI systems, cybersecurity solutions, digital twins, and intelligent infrastructure for enterprises worldwide.",
+    "Phexara engineers a tripartite pillar of ethical AI system, cybersecurity solution and intelligent infrastructure for enterprises, and individuals globally.",
   openGraph: {
     title: "PHEXARA, LTD — Engineering Intelligent Systems",
     description:
-      "PHEXARA develops advanced AI systems, cybersecurity solutions, digital twins, and intelligent infrastructure for enterprises worldwide.",
+      "Phexara engineers a tripartite pillar of ethical AI system, cybersecurity solution and intelligent infrastructure for enterprises, and individuals globally.",
     siteName: "PHEXARA, LTD",
     type: "website",
     url: "https://www.phexara.co.uk",
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PHEXARA, LTD — Engineering Intelligent Systems",
     description:
-      "PHEXARA develops advanced AI systems, cybersecurity solutions, digital twins, and intelligent infrastructure for enterprises worldwide.",
+      "Phexara engineers a tripartite pillar of ethical AI system, cybersecurity solution and intelligent infrastructure for enterprises, and individuals globally.",
     images: ["/banner.png"],
   },
 };

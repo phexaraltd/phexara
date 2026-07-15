@@ -6,10 +6,10 @@ import Link from "next/link";
 const SOL_NAV_LINKS = [
   { id: "software", label: "Software Development" },
   { id: "ai-gov", label: "AI Governance" },
-  // { id: "twins", label: "Digital Twins" },
-  { id: "security", label: "Cloud Security" },
-  { id: "commerce", label: "Smart Commerce" },
-  { id: "edge", label: "Edge AI & IoT" },
+   { id: "security", label: "Cloud Security" },
+  { id: "Applied", label: "Applied AI & Vertical SaaS" },
+  { id: "HCI", label: "HCI & Adaptive Learning" },
+  { id: "RAI", label: "RAI (Responsible AI) & SbD Systems." },
 ];
 
 export default function SolutionsContent() {
@@ -119,16 +119,16 @@ export default function SolutionsContent() {
       </div>
     </div>
   </section>
-
+  
   {/* 03 DIGITAL TWINS */}
-  {/* <section className="sol-section" id="twins">
+  <section className="sol-section" id="security">
     <div className="sol-inner">
       <div className="sol-meta" data-anim="fade-left">
         <div className="sol-number">03 / 06</div>
-        <h2 className="sol-title-lg">Digital Twin Intelligence</h2>
+        <h2 className="sol-title-lg">Cloud Security</h2>
         <p className="sol-body">Digital twins are virtual models of physical systems that enable real-time monitoring, simulation, and prediction. We build twin ecosystems that transform how organizations manage assets, infrastructure, and operations.</p>
         <p className="sol-body">From manufacturing plants to smart buildings, our digital twin platforms close the loop between the physical and digital world.</p>
-        <Link href="/contact" className="sol-cta-link">Explore digital twins <span>→</span></Link>
+        <Link href="/contact" className="sol-cta-link">Explore Cloud Security <span>→</span></Link>
       </div>
       <div data-anim="fade-right">
         <ul className="services-list">
@@ -149,20 +149,20 @@ export default function SolutionsContent() {
         </div>
       </div>
     </div>
-  </section> */}
+  </section>
 
   {/* 04 CLOUD SECURITY */}
-  <section className="sol-section" id="security">
+  <section className="sol-section" id="Applied">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
-        <div className="sol-number">03 / 06</div>
-        <h2 className="sol-title-lg">Cloud & Application Security</h2>
+        <div className="sol-number">04 / 06</div>
+        <h2 className="sol-title-lg">Applied AI & Vertical SaaS</h2>
         <p className="sol-body">Enterprise-grade protection built into every layer of your digital stack. Our security practice combines deep offensive knowledge with robust defensive architecture — providing the full picture that organizations need to stay resilient.</p>
         <p className="sol-body">From penetration testing to zero trust architecture, we build security programs that scale with your organization.</p>
-        <Link href="/contact" className="sol-cta-link">Get a security assessment <span>→</span></Link>
+        <Link href="/contact" className="sol-cta-link">Get a Vertical SaaS <span>→</span></Link>
       </div>
       <div data-anim="fade-left">
-        <ul className="services-list">
+        <ul className="services-list"> 
           <li>Cloud Security Architecture (AWS, Azure, GCP)</li>
           <li>Penetration Testing & VAPT</li>
           <li>Zero Trust Implementation</li>
@@ -183,14 +183,14 @@ export default function SolutionsContent() {
   </section>
 
   {/* 05 SMART COMMERCE */}
-  <section className="sol-section" id="commerce">
+  <section className="sol-section" id="HCI">
     <div className="sol-inner">
       <div className="sol-meta" data-anim="fade-left">
-        <div className="sol-number">04 / 06</div>
-        <h2 className="sol-title-lg">Smart Commerce Infrastructure</h2>
+        <div className="sol-number">05 / 06</div>
+        <h2 className="sol-title-lg">HCI & Adaptive Learning</h2>
         <p className="sol-body">End-to-end infrastructure enabling brands to predict consumer behaviour, automate engagement, and secure transactions. We combine AI-powered analytics with robust commerce platforms to drive measurable business outcomes.</p>
         <p className="sol-body">Built for retailers, marketplaces, and financial service providers navigating the future of intelligent commerce.</p>
-        <Link href="/contact" className="sol-cta-link">Explore commerce solutions <span>→</span></Link>
+        <Link href="/contact" className="sol-cta-link">Explore HCI & Adaptive Learning <span>→</span></Link>
       </div>
       <div data-anim="fade-right">
         <ul className="services-list">
@@ -214,14 +214,14 @@ export default function SolutionsContent() {
   </section>
 
   {/* 06 EDGE AI */}
-  <section className="sol-section" id="edge">
+  <section className="sol-section" id="RAI">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
-        <div className="sol-number">05 / 06</div>
-        <h2 className="sol-title-lg">Edge AI & Intelligent IoT</h2>
+        <div className="sol-number">06 / 06</div>
+        <h2 className="sol-title-lg">RAI (Responsible AI) & SbD Systems.</h2>
         <p className="sol-body">AI-powered connected environments that process, reason, and act at the edge — where decisions must happen in milliseconds and connectivity cannot be assumed. We build distributed intelligence systems for the physical world.</p>
         <p className="sol-body">From smart cities to industrial manufacturing, our edge AI platforms bring intelligence to the devices, environments, and systems that matter most.</p>
-        <Link href="/contact" className="sol-cta-link">Discuss edge AI <span>→</span></Link>
+        <Link href="/contact" className="sol-cta-link">Discuss SbD Systems.<span>→</span></Link>
       </div>
       <div data-anim="fade-left">
         <ul className="services-list">

@@ -48,9 +48,10 @@ export default function Footer() {
           <ul>
             <li><Link href="/solutions#software">Software Development</Link></li>
             <li><Link href="/solutions#ai-gov">AI Governance</Link></li>
-            <li><Link href="/solutions#twins">Applied AI & Vertical SaaS</Link></li>
-            <li><Link href="/solutions#security">HCI & Adaptive Learning</Link></li>
-            <li><Link href="/solutions#edge">RAI Responsible AI & SbD Systems</Link></li>
+             <li><Link href="/solutions#security">Cloud Security</Link></li>
+            <li><Link href="/solutions#Applied">Applied AI & Vertical SaaS</Link></li>
+            <li><Link href="/solutions#HCI">HCI & Adaptive Learning</Link></li>
+            <li><Link href="/solutions#RAI"> RAI (Responsible AI) & SbD Systems.</Link></li>
           </ul>
         </div>
         <div className="footer-col">

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { marked } from "marked";
 import BlogPostContent from "@/components/pages/BlogPostContent";
-import { getAllPosts, getPostBySlug } from "@/lib/blog-mysql";
+import { getAllPosts, getPostBySlug } from "@/lib/blog-api";
 
 // Posts live in MySQL now, so we can't know all slugs at build time the
 // way we could with local files — render each post on request instead.

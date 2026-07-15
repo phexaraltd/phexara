@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.css"
+
 const NAV_LINKS = [
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
@@ -13,17 +14,29 @@ const NAV_LINKS = [
   { href: "/insights", label: "Insights" },
 ];
 
+// Routes whose page opens with a dark hero. Add/remove paths here as needed —
+// this list is the single source of truth, so there's no DOM guessing.
+const DARK_HERO_ROUTES = ["/about", "/projects", "/careers", "/contact"];
+
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Computed synchronously on every render — no effect, no flash, no race.
+  const isDarkHeroPage = DARK_HERO_ROUTES.some(
+    (route) => pathname === route || pathname.startsWith(route + "/")
+  );
+  // While it's a dark-hero page AND the user hasn't scrolled past it yet,
+  // the header stays transparent.
+  const transparent = isDarkHeroPage && !scrolled;
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 400);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -38,8 +51,11 @@ export default function Header() {
 
   return (
     <>
-      <nav className={`nav${scrolled ? " scrolled" : ""}`} id="main-nav">
-            <Link href="/" className="nav-logo">
+      <nav
+        className={`nav${scrolled ? " scrolled" : ""}${transparent ? " transparent" : ""}`}
+        id="main-nav"
+      >
+        <Link href="/" className="nav-logo">
           <img src="/phexaraicon.png" alt="PHEXARA, LTD" className="nav-logo-img" />
         </Link>
 

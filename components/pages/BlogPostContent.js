@@ -35,7 +35,7 @@ export default function BlogPostContent({ post, contentHtml, related }) {
         <article className="post-body" dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <div className="post-cta">
           <p>Want to talk about how this applies to your organisation?</p>
-          <Link href="/contact" className="btn btn-filled"><span>Contact Us</span></Link>
+          <Link href="/contact" className="hero-btn-filled"><span>Contact Us</span></Link>
         </div>
       </section>
 
@@ -58,24 +58,25 @@ export default function BlogPostContent({ post, contentHtml, related }) {
       <style jsx>{`
         :global(.back-link) {
           display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-          color: #4a4a4a; margin-bottom: 2.5rem; text-decoration: none; transition: color var(--transition);
+          color: #C9A07E; margin-bottom: 2.5rem; text-decoration: none; transition: color var(--transition);
         }
         :global(.back-link:hover) { color: var(--white); }
         .post-hero {
           min-height: 45vh; display: flex; flex-direction: column; justify-content: flex-end;
           padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-          background: var(--black); position: relative; overflow: hidden;
+          background: radial-gradient(ellipse 70% 60% at 10% 0%, #2a2016 0%, #1a1a1a 45%, #0d0d0d 100%);
+          position: relative; overflow: hidden;
         }
-        .post-cat { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #3a3a3a; margin-bottom: 1.5rem; }
+        .post-cat { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: #C9A07E; margin-bottom: 1.5rem; }
         .post-hero h1 {
           font-family: 'Space Grotesk', sans-serif;
           font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 700;
           line-height: 1.08; letter-spacing: -0.02em; color: var(--white); margin-bottom: 2rem; max-width: 900px;
         }
-        .post-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 12.5px; color: #5a5a5a; }
+        .post-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 12.5px; color: #9a9a9a; }
 
         .post-cover-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 5% 0; }
-        .post-cover { width: 100%; aspect-ratio: 21/9; object-fit: contain; object-position: center; background: var(--gray-50); display: block; }
+        .post-cover { width: 100%; aspect-ratio: 21/9; object-fit: cover; object-position: center; background: var(--gray-50); display: block; border-radius: 16px; }
 
         .post-body-section { padding: 6rem 5%; max-width: 760px; margin: 0 auto; }
         .post-body :global(h2) {
@@ -87,27 +88,34 @@ export default function BlogPostContent({ post, contentHtml, related }) {
         .post-body :global(ul), .post-body :global(ol) { margin: 0 0 1.5rem 1.25rem; }
         .post-body :global(li) { font-size: 16px; line-height: 1.85; color: var(--gray-600); font-weight: 300; margin-bottom: 0.5rem; }
         .post-body :global(strong) { font-weight: 600; color: var(--black); }
-        .post-body :global(a) { color: var(--black); text-decoration: underline; }
+        .post-body :global(a) { color: #C9A07E; text-decoration: underline; }
 
         .post-cta {
-          margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #e8e8e8;
+          margin-top: 4rem; padding: 2.5rem; border-top: none;
+          background: #EDE9E1; border-radius: 16px;
           display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
         }
-        .post-cta p { font-size: 15px; color: var(--gray-500); }
+        .post-cta p { font-size: 15px; color: var(--gray-600); font-weight: 500; }
 
-        .related-section { padding: 6rem 5% 8rem; background: var(--gray-50); border-top: 1px solid #e8e8e8; }
-        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #e8e8e8; margin-top: 3rem; }
+        .related-section { padding: 6rem 5% 8rem; background: #EDE9E1; border-top: none; }
+        .related-section .section-title :global(em) { font-style: italic; font-weight: 300; color: #C9A07E; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; background: transparent; margin-top: 3rem; }
         :global(.related-card) {
-          background: var(--white); padding: 2.5rem 2rem; text-decoration: none;
-          display: flex; flex-direction: column; gap: 1rem; transition: background var(--transition);
+          background: var(--white); padding: 2rem; text-decoration: none;
+          border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+          display: flex; flex-direction: column; gap: 1rem;
+          transition: box-shadow 0.25s ease, transform 0.25s ease;
         }
-        :global(.related-card:hover) { background: var(--white); }
-        .related-cat { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gray-400); }
-        .related-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: var(--gray-600); line-height: 1.35; flex: 1; }
-        .related-arrow { font-size: 1rem; color: var(--gray-300); }
+        :global(.related-card:hover) { box-shadow: 0 12px 28px rgba(0,0,0,0.08); transform: translateY(-3px); background: var(--white); }
+        :global(.related-card:hover .related-title) { color: var(--black); }
+        :global(.related-card:hover .related-arrow) { color: #C9A07E; transform: translate(3px,-3px); }
+        .related-cat { font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: #C9A07E; }
+        .related-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: var(--black); line-height: 1.35; flex: 1; }
+        .related-arrow { font-size: 1rem; color: var(--gray-300); transition: all var(--transition); }
 
         @media (max-width: 768px) {
           .related-grid { grid-template-columns: 1fr; }
+          .post-cta { flex-direction: column; align-items: flex-start; }
         }
       `}</style>
     </>

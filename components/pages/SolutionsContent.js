@@ -32,14 +32,16 @@ export default function SolutionsContent() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
-    <div style={{position: "relative", zIndex: "1"}}>
-      <p className="section-tag" data-anim="fade-up">Solutions</p>
-      <h1 data-anim="fade-up" data-delay="100">Six disciplines.<br />One <em>unified</em> vision.</h1>
-      <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA delivers across the full stack of intelligent digital infrastructure — from AI systems to cybersecurity, digital twins to edge computing.</p>
-    </div>
-  </section>
+<section className="page-hero">
+  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  {/* eslint-disable-next-line @next/next/no-img-element */}
+  <img src="/node.png" alt="" aria-hidden="true" className="hex-cluster" />
+  <div style={{position: "relative", zIndex: "1"}}>
+    <p className="section-tag" data-anim="fade-up">Solutions</p>
+    <h1 data-anim="fade-up" data-delay="100">Six disciplines.<br />One <em>unified</em> vision.</h1>
+    <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA delivers across the full stack of intelligent digital infrastructure — from AI systems to cybersecurity, digital twins to edge computing.</p>
+  </div>
+</section>
 
   <nav className="sol-nav">
     <div className="sol-nav-inner">
@@ -244,58 +246,130 @@ export default function SolutionsContent() {
 
   
       <style jsx>{`
-    .page-hero {
-      min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end;
-      padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-      background: var(--white); position: relative; overflow: hidden;
-      border-bottom: 1px solid #e8e8e8;
-    }
-    .page-hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-      line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
-    }
-    .page-hero h1 em { font-style: italic; font-weight: 300; color: var(--gray-400); }
-    .page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; }
+ .page-hero {
+  min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: calc(var(--nav-height) + 5rem) 5% 5rem;
+  background: var(--white); position: relative; overflow: hidden;
+  border-bottom: 1px solid #e8e8e8;
+}
+.page-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.25rem, 5vw, 4.85rem);   /* was: clamp(3rem, 7vw, 7rem) — reduced */
+  line-height: 1.05;                          /* was: 0.93 — slightly looser so it doesn't feel cramped */
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 2rem;
+  max-width: 680px;                            /* NEW — stops the text from running under the image */
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
+.page-hero-sub {
+  font-size: 16px;
+  color: var(--gray-500);
+  max-width: 480px;                             /* was: 520px — pulled in slightly to match */
+  line-height: 1.8;
+  font-weight: 300;
+}
+.page-hero .section-tag { color: #C9A07E; }
 
+.hex-cluster {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  width: 34%;
+  max-width: 420px;
+  min-width: 240px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hex-cluster { display: none; }
+}
     /* SOL NAV */
-    .sol-nav { padding: 2.5rem 5%; border-bottom: 1px solid #e8e8e8; background: var(--gray-50); }
-    .sol-nav-inner { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .sol-nav-link {
-      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gray-400); padding-bottom: 4px; border-bottom: 1.5px solid transparent;
-      transition: all var(--transition); font-weight: 400;
-    }
-    .sol-nav-link:hover, .sol-nav-link.active { color: var(--black); border-bottom-color: var(--black); }
+   .sol-nav { padding: 2.5rem 5%; border-bottom: none; background: #EDE9E1; }
 
+.sol-nav-inner { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+.sol-nav-link {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4a4a4a;
+  padding: 10px 20px;
+  border: 1px solid #d3cec2;
+  border-radius: 999px;
+  background: transparent;
+  transition: all var(--transition);
+}
+
+.sol-nav-link:hover,
+.sol-nav-link.active {
+  color: var(--black);
+  border-color: #b3ab98;
+  background: #fff;
+}
     /* SOLUTIONS DETAIL */
-    .sol-section { padding: 8rem 5%; border-bottom: 1px solid #e8e8e8; }
-    .sol-section:nth-child(even) { background: var(--gray-50); }
-    .sol-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8rem; align-items: start; }
-    .sol-inner.reverse { direction: rtl; }
-    .sol-inner.reverse > * { direction: ltr; }
-    .sol-meta { position: sticky; top: calc(var(--nav-height) + 3rem); }
-    .sol-number { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
-    .sol-title-lg { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 1.5rem; line-height: 1.1; }
-    .sol-body { font-size: 15px; color: var(--gray-500); line-height: 1.85; font-weight: 300; margin-bottom: 2rem; }
-    :global(.sol-cta-link) { font-size: 13px; font-weight: 500; color: var(--black); letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: gap var(--transition); }
-    :global(.sol-cta-link:hover) { gap: 1rem; }
-    .services-list { list-style: none; }
-    .services-list li {
-      padding: 1.2rem 1.5rem; border: 1px solid #e8e8e8; margin-bottom: 0.75rem;
-      display: flex; align-items: center; gap: 1rem; font-size: 14px; color: var(--gray-600);
-      background: var(--white); transition: all var(--transition);
-    }
-    .services-list li:hover { border-color: var(--black); color: var(--black); }
-    .services-list li::before { content: '→'; color: #bbb; transition: color var(--transition); flex-shrink: 0; }
-    .services-list li:hover::before { color: var(--black); }
-    .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2rem; }
+  .sol-section { padding: 8rem 5%; border-bottom: 1px solid #eee; }
+.sol-section:nth-child(even) { background: var(--white); }  /* no more gray alternating — screenshot is consistently white */
 
-    @media (max-width: 1024px) {
-      .sol-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .sol-inner.reverse { direction: ltr; }
-      .sol-meta { position: static; }
-    }
+.sol-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8rem; align-items: start; }
+.sol-inner.reverse { direction: rtl; }
+.sol-inner.reverse > * { direction: ltr; }
+.sol-meta { position: sticky; top: calc(var(--nav-height) + 3rem); }
+
+.sol-number { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+
+.sol-title-lg {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: #B9825A;
+  margin-bottom: 1.5rem; line-height: 1.1;
+}
+
+.sol-body { font-size: 15px; color: var(--gray-500); line-height: 1.85; font-weight: 300; margin-bottom: 2rem; }
+
+:global(.sol-cta-link) {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #111;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1.5px solid #7C1FB4;
+  border-radius: 999px;
+  padding: 0.85rem 1.7rem;
+  background: #fff;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+:global(.sol-cta-link:hover) {
+  background: #f9f2fc;
+  border-color: #6a1a99;
+  gap: 0.65rem;
+}
+
+.services-list { list-style: none; }
+.services-list li {
+  padding: 1.1rem 1.5rem; border: 1px solid #e3e3e3; border-radius: 999px; margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 1rem; font-size: 13.5px; color: var(--gray-600);
+  background: var(--white); transition: all var(--transition);
+}
+.services-list li:hover { border-color: #B9825A; color: var(--black); }
+.services-list li::before { content: '—'; color: #bbb; transition: color var(--transition); flex-shrink: 0; }
+.services-list li:hover::before { color: #B9825A; }
+
+.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2rem; }
+.tech-tags .badge {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #C9A07E; background: transparent; border: 1px solid #C9A07E;
+  border-radius: 999px; padding: 6px 14px;
+}
+
+@media (max-width: 1024px) {
+  .sol-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .sol-inner.reverse { direction: ltr; }
+  .sol-meta { position: static; }
+}
   `}</style>
     </>
   );

@@ -1,8 +1,9 @@
 /* ===== Phexara header ===== */
-
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -10,13 +11,31 @@
   gap: 24px;
   padding: 18px 48px;
   background: #ffffff;
-  transition: box-shadow 0.2s ease;
+  transition: background 0.25s ease, box-shadow 0.2s ease;
 }
-
 .nav.scrolled {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Transparent state — only active on pages whose first section is a dark hero,
+   and only until the user scrolls past that hero. */
+.nav.transparent {
+  background: transparent !important;
+  box-shadow: none;
+}
+.nav.transparent .nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+}
+.nav.transparent .nav-links a:hover,
+.nav.transparent .nav-links a.active {
+  color: #C9A07E;
+}
+.nav.transparent .nav-links a::after {
+  background: #C9A07E;
+}
+.nav.transparent .hamburger span {
+  background: #ffffff;
+}
 /* Logo */
 .nav-logo {
   display: flex;
@@ -25,7 +44,6 @@
   text-decoration: none;
   flex-shrink: 0;
 }
-
 /* .nav-logo-img {
   height: 40px;
   width: auto;
@@ -41,7 +59,6 @@
   margin: 0;
   padding: 0;
 }
-
 .nav-links a {
   position: relative;
   font-size: 15px;
@@ -51,7 +68,6 @@
   padding-bottom: 6px;
   transition: color 0.15s ease;
 }
-
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -63,21 +79,17 @@
   opacity: 0;
   transition: opacity 0.15s ease;
 }
-
 .nav-links a:hover {
   color: #b0795a;
   text-decoration: none !important;
 }
-
 .nav-links a:hover::after {
   opacity: 1;
 }
-
 .nav-links a.active {
   color: #b0795a;
   font-weight: 500;
 }
-
 .nav-links a.active::after {
   opacity: 1;
 }
@@ -89,7 +101,6 @@
   gap: 20px;
   flex-shrink: 0;
 }
-
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -108,7 +119,6 @@
   white-space: nowrap;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
-
 .nav-btn:hover {
   filter: brightness(0.88)  !important;
   transform: translateY(-1px);
@@ -127,7 +137,6 @@
   cursor: pointer;
   padding: 0;
 }
-
 .hamburger span {
   display: block;
   height: 2px;
@@ -136,7 +145,6 @@
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
 .hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -166,19 +174,16 @@
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 99;
 }
-
 .mobile-menu.open {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-
 .mobile-menu a {
   font-size: 18px;
   color: #333333;
   text-decoration: none;
 }
-
 .mobile-menu a.active {
   color: #b0795a;
   font-weight: 500;

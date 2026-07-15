@@ -9,7 +9,7 @@ export default function CareersContent() {
   <section className="page-hero dark-section">
     <div className="grid-bg grid-bg-dark" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
     <div style={{position: "relative", zIndex: "1"}}>
-      <p className="section-tag" style={{color: "#3a3a3a"}} data-anim="fade-up">Careers</p>
+      <p className="section-tag" data-anim="fade-up">Careers</p>
       <h1 data-anim="fade-up" data-delay="100">Join the builders<br />of <em>tomorrow</em></h1>
       <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA is for engineers, researchers, and operators who think in systems, build with purpose, and want their work to create lasting impact in the world.</p>
     </div>
@@ -45,12 +45,12 @@ export default function CareersContent() {
       </div>
       <div data-anim="fade-right" style={{paddingTop: "5rem"}}>
         <blockquote className="culture-quote">"We&apos;re not building another tech company. We&apos;re building the intelligent infrastructure that future companies run on — and we want the people who help build it to share in what that creates."</blockquote>
-        <p style={{fontSize: "12px", color: "var(--gray-400)", marginTop: "1.5rem", letterSpacing: "0.05em"}}>— PHEXARA Founding Team</p>
-        <div style={{marginTop: "3rem", padding: "2.5rem", border: "1px solid #e8e8e8"}}>
-          <p style={{fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gray-400)", marginBottom: "1rem"}}>Current Status</p>
-          <p style={{fontSize: "15px", color: "var(--black)", lineHeight: "1.65"}}>We are in the founding phase. Roles open as we grow. Register your interest now and be the first to know when relevant positions launch.</p>
-          <div style={{marginTop: "2rem"}}><Link href="/contact" className="btn btn-filled"><span>Register Interest →</span></Link></div>
-        </div>
+        <p style={{fontSize: "12px", color: "#C9A07E", marginTop: "1.5rem", letterSpacing: "0.05em", textTransform: "uppercase", fontWeight: 600}}>— PHEXARA Founding Team</p>
+       <div className="why-status-box">
+  <p style={{fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gray-400)", marginBottom: "1rem"}}>Current Status</p>
+  <p style={{fontSize: "15px", color: "var(--black)", lineHeight: "1.65"}}>We are in the founding phase. Roles open as we grow. Register your interest now and be the first to know when relevant positions launch.</p>
+  <div style={{marginTop: "2rem"}}><Link href="/contact" className="hero-btn-filled"><span>Register Interest <span className="hero-btn-arrow">→</span></span></Link></div>
+</div>
       </div>
     </div>
   </section>
@@ -126,85 +126,132 @@ export default function CareersContent() {
   </section>
 
   <section className="career-cta dark-section">
-    <span className="section-tag" style={{color: "#3a3a3a"}} data-anim="fade-up">Get Started</span>
+    <span className="section-tag" data-anim="fade-up">Get Started</span>
     <h2 className="section-title" data-anim="fade-up" data-delay="100">Ready to <em>build?</em></h2>
     <p className="section-body" data-anim="fade-up" data-delay="200">Roles are launching as we grow. Register your interest now and we&apos;ll reach out when a position that fits your background opens.</p>
     <div data-anim="fade-up" data-delay="300" style={{display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap"}}>
-      <Link href="/contact" className="btn btn-white"><span>Register Interest</span></Link>
+      <Link href="/contact" className="btn-register"><span>Register Interest</span></Link>
     </div>
   </section>
 
   
       <style jsx>{`
-    .page-hero {
-      min-height: 65vh; display: flex; flex-direction: column; justify-content: flex-end;
-      padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-      background: var(--black); border-bottom: 1px solid #1a1a1a; position: relative; overflow: hidden;
-    }
-    .page-hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-      line-height: 0.93; letter-spacing: -0.03em; color: var(--white); margin-bottom: 2rem;
-    }
-    .page-hero h1 em { font-style: italic; font-weight: 300; color: #2a2a2a; }
-    .page-hero-sub { font-size: 16px; color: #4a4a4a; max-width: 520px; line-height: 1.8; font-weight: 300; }
+ .page-hero {
+  min-height: 65vh; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: calc(var(--nav-height) + 5rem) 5% 5rem;
+  background: radial-gradient(ellipse 70% 60% at 10% 0%, #2a2016 0%, #1a1a1a 45%, #0d0d0d 100%);
+  border-bottom: 1px solid #1a1a1a; position: relative; overflow: hidden;
+}
+.page-hero .section-tag { color: #C9A07E; }
+.page-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
+  line-height: 0.93; letter-spacing: -0.03em; color: var(--white); margin-bottom: 2rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
+.page-hero-sub { font-size: 16px; color: #9a9a9a; max-width: 520px; line-height: 1.8; font-weight: 300; }
+
+.page-hero .grid-bg-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.14) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255,255,255,0.14) 1.5px, transparent 1.5px);
+  background-size: 44px 44px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 42%, black 65%);
+  mask-image: linear-gradient(to right, transparent 0%, transparent 42%, black 65%);
+}
 
     /* WHY */
-    .why-section { padding: 8rem 5%; background: var(--white); }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
-    .why-reasons { margin-top: 3rem; }
-    .why-item { padding: 1.5rem 0; border-bottom: 1px solid #e8e8e8; display: flex; gap: 1.5rem; }
-    .why-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-    .why-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 4px; }
-    .why-desc { font-size: 13px; color: var(--gray-500); line-height: 1.65; }
-    .culture-quote {
-      font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-      font-weight: 400; line-height: 1.3; letter-spacing: -0.015em; color: var(--black);
-      border-left: 3px solid var(--black); padding-left: 2rem;
-    }
+.why-section { padding: 8rem 5%; background: var(--white); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
+
+.why-section .section-title em { font-style: italic; font-weight: 300; color: #C9A07E; }
+
+.why-reasons { margin-top: 3rem; }
+.why-item { padding: 1.5rem 0; border-bottom: 1px solid #eee; display: flex; gap: 1.5rem; }
+.why-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; color: var(--black); }
+.why-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+.why-desc { font-size: 13px; color: var(--gray-500); line-height: 1.65; }
+
+.culture-quote {
+  font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 400; line-height: 1.3; letter-spacing: -0.015em; color: var(--black);
+  border-left: 3px solid #C9A07E; padding-left: 2rem; font-style: italic;
+}
+
+.why-status-box {
+  margin-top: 3rem; padding: 2.5rem; border: 1px solid #e8e8e8; border-radius: 14px;
+}
 
     /* DEPARTMENTS */
-    .depts-section { padding: 8rem 5%; background: var(--gray-50); border-top: 1px solid #e8e8e8; }
-    .dept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #e0e0e0; margin-top: 4rem; }
-    .dept-card {
-      background: var(--white); padding: 3rem 2.5rem;
-      transition: background var(--transition), transform var(--transition);
-      position: relative; overflow: hidden;
-    }
-    .dept-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 3px; background: var(--black);
-      transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    .dept-card:hover::after { width: 100%; }
-    .dept-card:hover { background: #fafafa; }
-    .dept-icon { font-size: 2rem; margin-bottom: 1.5rem; display: block; }
-    .dept-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
-    .dept-desc { font-size: 13px; color: var(--gray-400); line-height: 1.65; margin-bottom: 1.5rem; }
-    .dept-status { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-300); }
+ .depts-section { padding: 8rem 5%; background: var(--white); border-top: none; }
+
+.depts-section .section-title em { font-style: italic; font-weight: 300; color: #C9A07E; }
+
+.dept-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  background: transparent; margin-top: 4rem;
+  border-left: 1px solid #ebebeb; border-top: 1px solid #ebebeb;
+}
+.dept-card {
+  background: var(--white); padding: 3rem 2.5rem;
+  border-right: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb;
+  transition: background var(--transition), transform var(--transition);
+  position: relative; overflow: hidden;
+}
+.dept-card::after { display: none; }
+.dept-card:hover { background: #fafafa; }
+
+.dept-icon {
+  font-size: 1.2rem; margin-bottom: 1.5rem; display: flex;
+  width: 36px; height: 36px; border: 1px solid var(--black); border-radius: 8px;
+  align-items: center; justify-content: center; color: var(--black);
+}
+.dept-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--black); margin-bottom: 0.6rem; }
+.dept-desc { font-size: 13px; color: var(--gray-500); line-height: 1.65; margin-bottom: 1.75rem; }
+.dept-status { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #C9A07E; }
+
+@media (max-width: 900px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .dept-grid { grid-template-columns: 1fr; } }
 
     /* PROCESS */
-    .process-section { padding: 8rem 5%; background: var(--white); border-top: 1px solid #e8e8e8; }
-    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-top: 4rem; position: relative; }
-    .process-steps::before {
-      content: ''; position: absolute; top: 24px; left: 10%; right: 10%;
-      height: 1px; background: linear-gradient(to right, transparent, #e0e0e0 20%, #e0e0e0 80%, transparent);
-    }
-    .ps { text-align: center; }
-    .ps-num {
-      width: 48px; height: 48px; border: 1px solid #e0e0e0;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gray-400);
-      background: var(--white); margin: 0 auto 1.5rem; position: relative; z-index: 1;
-    }
-    .ps-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 0.5rem; }
-    .ps-desc { font-size: 12.5px; color: var(--gray-400); line-height: 1.6; }
+.process-section { padding: 8rem 5%; background: var(--white); border-top: none; text-align: center; }
 
+.process-section .section-tag,
+.process-section .section-title { text-align: center; }
+.process-section .section-title { margin: 0 auto; }
+.process-section .section-title em { font-style: italic; font-weight: 300; color: #C9A07E; }
+
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-top: 4rem; position: relative; }
+.process-steps::before {
+  content: ''; position: absolute; top: 24px; left: 10%; right: 10%;
+  height: 1px; background: linear-gradient(to right, transparent, #C9A07E 20%, #C9A07E 80%, transparent);
+}
+.ps { text-align: center; }
+.ps-num {
+  width: 48px; height: 48px; border: 1px solid #C9A07E; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #C9A07E;
+  background: var(--white); margin: 0 auto 1.5rem; position: relative; z-index: 1;
+}
+.ps-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 0.5rem; }
+.ps-desc { font-size: 12.5px; color: var(--gray-500); line-height: 1.6; max-width: 220px; margin: 0 auto; }
+
+@media (max-width: 900px) {
+  .process-steps { grid-template-columns: repeat(2, 1fr); row-gap: 4rem; }
+  .process-steps::before { display: none; }
+}
+@media (max-width: 480px) {
+  .process-steps { grid-template-columns: 1fr; }
+}
     /* CTA */
-    .career-cta { padding: 8rem 5%; background: var(--black); text-align: center; }
-    .career-cta .section-title { color: var(--white); margin: 0 auto 1.5rem; max-width: 600px; }
-    .career-cta .section-body { color: #4a4a4a; margin: 0 auto 3rem; text-align: center; }
-
+   .career-cta {
+  padding: 8rem 5%; text-align: center;
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, #221a12 0%, #1a1a1a 45%, #0d0d0d 100%);
+}
+.career-cta .section-tag { color: #C9A07E; }
+.career-cta .section-title { color: var(--white); margin: 0 auto 1.5rem; max-width: 600px; }
+.career-cta .section-title em { font-style: normal; font-weight: 700; color: #C9A07E; }
+.career-cta .section-body { color: #9a9a9a; margin: 0 auto 3rem; text-align: center; }
     @media (max-width: 1024px) {
       .dept-grid { grid-template-columns: 1fr 1fr; }
       .process-steps { grid-template-columns: 1fr 1fr; }

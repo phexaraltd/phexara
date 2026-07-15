@@ -26,15 +26,15 @@ export default function IndustriesContent() {
         <div className="ind-num">02</div>
         <span className="ind-icon">◈</span>
         <div className="ind-name">Healthcare</div>
-        <div className="ind-desc">Secure health data infrastructure, clinical AI governance, predictive diagnostics, and digital twin models for medical device and treatment optimisation.</div>
-        <div className="ind-cap"><span>Data Security</span><span>AI Governance</span><span>Digital Twins</span><span>IoT</span></div>
+        <div className="ind-desc">Secure health data infrastructure, clinical AI governance, predictive diagnostics, and Applied AI & Vertical SaaS models for medical device and treatment optimisation.</div>
+        <div className="ind-cap"><span>Data Security</span><span>AI Governance</span><span>Applied AI & Vertical SaaS</span><span>IoT</span></div>
       </div>
       <div className="ind-card" data-anim="fade-up">
         <div className="ind-num">03</div>
         <span className="ind-icon">⬡</span>
         <div className="ind-name">Manufacturing</div>
-        <div className="ind-desc">Industrial digital twins, predictive maintenance, edge AI for real-time quality control, and OT/IT security for connected factory environments.</div>
-        <div className="ind-cap"><span>Digital Twins</span><span>Edge AI</span><span>OT Security</span><span>Predictive ML</span></div>
+        <div className="ind-desc">Applied AI & Vertical SaaS, predictive maintenance, edge AI for real-time quality control, and OT/IT security for connected factory environments.</div>
+        <div className="ind-cap"><span>Applied AI & Vertical SaaS</span><span>Edge AI</span><span>OT Security</span><span>Predictive ML</span></div>
       </div>
       <div className="ind-card" data-anim="fade-up" data-delay="100">
         <div className="ind-num">04</div>
@@ -62,14 +62,14 @@ export default function IndustriesContent() {
         <span className="ind-icon">◈</span>
         <div className="ind-name">Energy & Utilities</div>
         <div className="ind-desc">Smart grid digital twins, critical infrastructure protection, edge AI for energy optimisation, and OT cybersecurity for power generation assets.</div>
-        <div className="ind-cap"><span>Digital Twins</span><span>Grid Intelligence</span><span>OT Security</span><span>Optimisation</span></div>
+        <div className="ind-cap"><span>Applied AI & Vertical SaaS</span><span>Grid Intelligence</span><span>OT Security</span><span>Optimisation</span></div>
       </div>
       <div className="ind-card" data-anim="fade-up" data-delay="100">
         <div className="ind-num">08</div>
         <span className="ind-icon">⬡</span>
         <div className="ind-name">Smart Cities</div>
         <div className="ind-desc">City-scale digital twin platforms, edge AI for transport and infrastructure, IoT sensor orchestration, and integrated urban intelligence systems.</div>
-        <div className="ind-cap"><span>Digital Twins</span><span>Edge AI</span><span>IoT</span><span>Urban Intelligence</span></div>
+        <div className="ind-cap"><span>Applied AI & Vertical SaaS</span><span>Edge AI</span><span>IoT</span><span>Urban Intelligence</span></div>
       </div>
       <div className="ind-card" data-anim="fade-up">
         <div className="ind-num">09</div>
@@ -100,27 +100,42 @@ export default function IndustriesContent() {
       font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
       line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
     }
-    .page-hero h1 em { font-style: italic; font-weight: 300; color: var(--gray-400); }
+   .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
     .page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; }
 
-    .industries-section { padding: 8rem 5%; }
-    .ind-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; background: #e8e8e8; margin-top: 4rem; }
-    .ind-card {
-      background: var(--white); padding: 3.5rem 3rem; position: relative;
-      transition: background var(--transition); overflow: hidden;
-    }
-    .ind-card:hover { background: var(--black); }
-    .ind-card:hover .ind-name, .ind-card:hover .ind-desc, .ind-card:hover .ind-icon { color: var(--white); }
-    .ind-card:hover .ind-cap span { border-color: #2a2a2a; color: #5a5a5a; }
-    .ind-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ccc; margin-bottom: 2rem; transition: color var(--transition); }
-    .ind-card:hover .ind-num { color: #2a2a2a; }
-    .ind-icon { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--black); transition: color var(--transition); display: block; }
-    .ind-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--black); margin-bottom: 1rem; letter-spacing: -0.02em; transition: color var(--transition); }
-    .ind-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; margin-bottom: 2rem; transition: color var(--transition); font-weight: 300; }
-    .ind-cap { display: flex; flex-wrap: wrap; gap: 6px; }
-    .ind-cap span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 12px; border: 1px solid #e0e0e0; color: var(--gray-400); transition: all var(--transition); }
+   .industries-section { padding: 8rem 5%; background: var(--white); }
+.ind-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; background: transparent; margin-top: 4rem; }
 
-    @media (max-width: 768px) { .ind-grid { grid-template-columns: 1fr; } }
+.ind-card {
+  background: var(--white); padding: 1.5rem; margin: -1.5rem; border-radius: 14px; position: relative;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  overflow: visible;
+}
+.ind-card:hover {
+  background: #faf7f2;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+  transform: translateY(-3px);
+}
+.ind-card:hover .ind-icon { border-color: #C9A07E; color: #C9A07E; }
+.ind-card:hover .ind-cap span { border-color: #C9A07E; color: #C9A07E; background: #fff; }
+
+.ind-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ccc; margin-bottom: 1.5rem; transition: color var(--transition); }
+.ind-card:hover .ind-num { color: #C9A07E; }
+
+.ind-icon {
+  font-size: 1.6rem; margin-bottom: 1.25rem; color: var(--black); transition: all var(--transition); display: flex;
+  width: 44px; height: 44px; border: 1px solid #e0e0e0; border-radius: 10px;
+  align-items: center; justify-content: center;
+}
+.ind-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: #B9825A; margin-bottom: 0.85rem; letter-spacing: -0.02em; }
+.ind-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; margin-bottom: 1.5rem; font-weight: 300; }
+.ind-cap { display: flex; flex-wrap: wrap; gap: 8px; }
+.ind-cap span {
+  font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;
+  padding: 6px 14px; border: 1px solid #C9A07E; border-radius: 999px; color: #C9A07E;
+  transition: all var(--transition);
+}
+@media (max-width: 768px) { .ind-grid { grid-template-columns: 1fr; gap: 3rem; } }
   `}</style>
     </>
   );

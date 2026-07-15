@@ -256,7 +256,7 @@ export default function HomeContent() {
       </section>
 
       <style jsx>{`
-        /* ============ HERO ============ */
+        /* ============ HERO ========== */
         .brown-color{
          color: #B0795A;
         }

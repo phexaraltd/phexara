@@ -1,5 +1,5 @@
 import BlogListContent from "@/components/pages/BlogListContent";
-import { getAllPosts, getPostBySlug } from "@/lib/blog-api";
+import { getAllPosts, getAllCategories } from "@/lib/blog-api";
 
 // Posts live in MySQL and can change at any time (a marketer might
 // publish mid-day) — render this on every request instead of baking it

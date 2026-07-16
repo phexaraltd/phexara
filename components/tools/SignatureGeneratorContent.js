@@ -5,6 +5,22 @@ import { useEffect, useState } from "react";
 const LOGO_URL = "https://www.phexara.co.uk/phexaraicon.png";
 const VISION_STATEMENT = "Engineering Intelligent Systems for a Secure Digital Future";
 
+// A 1x1 transparent PNG, stretched via width/height ATTRIBUTES (not CSS).
+// Gmail/Outlook signature editors strip most CSS (widths, padding,
+// letter-spacing, etc.) when you paste in, but they respect width/height
+// attributes on <img> tags. Using tiny spacer images instead of CSS-based
+// gaps is the standard trick to keep spacing intact across email clients.
+// Host a real 1x1 transparent PNG at this path.
+const SPACER_PIXEL = "https://www.phexara.co.uk/spacer.png";
+
+function spacerImgHoriz(widthPx) {
+  return `<img src="${SPACER_PIXEL}" width="${widthPx}" height="1" alt="" style="display:block;border:0;width:${widthPx}px;height:1px;max-width:${widthPx}px;" />`;
+}
+
+function spacerImgVert(heightPx) {
+  return `<img src="${SPACER_PIXEL}" width="1" height="${heightPx}" alt="" style="display:block;border:0;width:1px;height:${heightPx}px;max-height:${heightPx}px;" />`;
+}
+
 // Official staff titles + emails, matched regardless of which name is typed
 // first, so everyone's signature stays consistent without needing to type
 // title or email manually.
@@ -54,21 +70,23 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
   const title = jobTitle.trim() || "Job Title";
   const mail = email.trim() || "name@phexara.co.uk";
 
-const socialCells = SOCIAL_LINKS
+  const socialCells = SOCIAL_LINKS
     .map(
       (s, i) => `
-    ${i > 0 ? '<td style="width:12px; font-size:1px; line-height:1px;">&nbsp;</td>' : ""}
+    ${i > 0 ? `<td>${spacerImgHoriz(12)}</td>` : ""}
     <td>
       <a href="${s.href}" target="_blank" style="text-decoration:none;display:inline-block;">
-        <img src="${s.imgUrl}" width="16" height="16" alt="" style="display:block;border:0;" />
+        <img src="${s.imgUrl}" width="16" height="16" alt="" style="display:block;border:0;width:16px;height:16px;" />
       </a>
     </td>
   `
     )
     .join("");
 
-const spacer = (height) =>
-    `<tr><td style="height:${height}px; line-height:${height}px; font-size:1px;">&nbsp;</td></tr>`;
+  // Vertical spacer row using a stacked spacer image instead of a
+  // CSS height on the <td>, for the same email-client-sanitization reason.
+  const spacer = (heightPx) =>
+    `<tr><td>${spacerImgVert(heightPx)}</td></tr>`;
 
   return `
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; border-collapse: collapse;">
@@ -88,9 +106,10 @@ const spacer = (height) =>
     <td>
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td style="padding-right: 8px;" valign="middle">
-            <img src="${LOGO_URL}" width="22" height="22" alt="PHEXARA" style="display:block; border:0;" />
+          <td>
+            <img src="${LOGO_URL}" width="22" height="22" alt="PHEXARA" style="display:block; border:0; width:22px; height:22px;" />
           </td>
+          <td>${spacerImgHoriz(8)}</td>
           <td valign="middle">
             <div style="font-size: 13px; font-weight: 700; color: #0a0a0a; letter-spacing: 0.03em;">PHEXARA</div>
           </td>
@@ -120,9 +139,10 @@ const spacer = (height) =>
     <td>
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td style="padding-right: 12px;" valign="middle">
+          <td valign="middle">
             <div style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #999999;">Follow Us</div>
           </td>
+          <td>${spacerImgHoriz(12)}</td>
           <td valign="middle">
             <table cellpadding="0" cellspacing="0" border="0"><tr>${socialCells}</tr></table>
           </td>
@@ -272,4 +292,4 @@ export default function SignatureGeneratorContent() {
       `}</style>
     </div>
   );
-}3
+}

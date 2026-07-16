@@ -86,7 +86,7 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
             <img src="${LOGO_URL}" width="22" height="22" alt="PHEXARA" style="display:block; border:0;" />
           </td>
           <td valign="middle">
-            <div style="font-size: 13px; font-weight: 700; color: #0a0a0a; letter-spacing: 0.03em;">PHEXARA, LTD</div>
+            <div style="font-size: 13px; font-weight: 700; color: #0a0a0a; letter-spacing: 0.03em;">PHEXARA</div>
           </td>
         </tr>
       </table>

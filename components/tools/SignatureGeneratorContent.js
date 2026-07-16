@@ -66,20 +66,25 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
     )
     .join("");
 
+const spacer = (height) =>
+    `<tr><td style="height:${height}px; line-height:${height}px; font-size:1px;">&nbsp;</td></tr>`;
+
   return `
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; border-collapse: collapse;">
   <tr>
-    <td style="padding-bottom: 6px;">
+    <td>
       <div style="font-size: 16px; font-weight: 700; color: #0a0a0a; line-height: 1.3;">${first} ${last}</div>
     </td>
   </tr>
+  ${spacer(6)}
   <tr>
-    <td style="padding-bottom: 14px;">
+    <td>
       <div style="font-size: 13px; color: #5a5a5a; line-height: 1.3;">${title}</div>
     </td>
   </tr>
+  ${spacer(14)}
   <tr>
-    <td style="padding-bottom: 12px;">
+    <td>
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td style="padding-right: 8px;" valign="middle">
@@ -92,13 +97,16 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
       </table>
     </td>
   </tr>
+  ${spacer(12)}
   <tr>
-    <td style="padding-bottom: 16px; border-bottom: 1px solid #e0e0e0;">
-      <div style="font-size: 11.5px; color: #8a8a8a; font-style: italic; line-height: 1.4; padding-bottom: 16px;">${VISION_STATEMENT}</div>
+    <td style="border-bottom: 1px solid #e0e0e0;">
+      <div style="font-size: 11.5px; color: #8a8a8a; font-style: italic; line-height: 1.4;">${VISION_STATEMENT}</div>
+      ${spacer(16)}
     </td>
   </tr>
-<tr>
-    <td style="padding-top: 16px; padding-bottom: 16px;">
+  ${spacer(16)}
+  <tr>
+    <td>
       <div style="font-size: 12px;">
         <a href="https://www.phexara.co.uk" style="color: #0a0a0a; text-decoration: none;">www.phexara.co.uk</a>
         &nbsp;|&nbsp;
@@ -106,6 +114,7 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
       </div>
     </td>
   </tr>
+  ${spacer(16)}
   <tr>
     <td>
       <table cellpadding="0" cellspacing="0" border="0">

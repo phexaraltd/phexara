@@ -10,7 +10,7 @@ body {
   color: #0a0a0a;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
+  /* cursor: none; */
 }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
@@ -271,8 +271,8 @@ hr.divider { border: none; border-top: 1px solid #e8e8e8; }
   color: #fff;
   border: none;
   border-radius: 999px;
-  padding: 0.95rem 2.9rem;
-  font-size: 12px;
+  padding: 0.95rem 2.0rem;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -292,8 +292,8 @@ hr.divider { border: none; border-top: 1px solid #e8e8e8; }
   color: #111;
   border: 1.5px solid #d8c3dc;
   border-radius: 999px;
-  padding: 0.95rem 2.7rem;
-  font-size: 12px;
+  padding: 0.95rem 2.0rem;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;

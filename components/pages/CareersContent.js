@@ -6,14 +6,20 @@ export default function CareersContent() {
   return (
     <>
 
-  <section className="page-hero dark-section">
-    <div className="grid-bg grid-bg-dark" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
-    <div style={{position: "relative", zIndex: "1"}}>
+<section className="page-hero">
+  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  <div className="page-hero-row">
+    <div className="page-hero-text">
       <p className="section-tag" data-anim="fade-up">Careers</p>
       <h1 data-anim="fade-up" data-delay="100">Join the builders<br />of <em>tomorrow</em></h1>
       <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA is for engineers, researchers, and operators who think in systems, build with purpose, and want their work to create lasting impact in the world.</p>
     </div>
-  </section>
+    <div className="page-hero-graphic-col">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/man.png" alt="" className="careers-hero-graphic" />
+    </div>
+  </div>
+</section>
 
   <section className="why-section">
     <div className="why-grid">
@@ -136,31 +142,46 @@ export default function CareersContent() {
 
   
       <style jsx>{`
- .page-hero {
+.page-hero {
   min-height: 65vh; display: flex; flex-direction: column; justify-content: flex-end;
   padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-  background: radial-gradient(ellipse 70% 60% at 10% 0%, #2a2016 0%, #1a1a1a 45%, #0d0d0d 100%);
-  border-bottom: 1px solid #1a1a1a; position: relative; overflow: hidden;
+  background: var(--white); border-bottom: 1px solid #e8e8e8;
+  position: relative; overflow: hidden;
 }
 .page-hero .section-tag { color: #C9A07E; }
+
+.page-hero-row {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+}
+
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-  line-height: 0.93; letter-spacing: -0.03em; color: var(--white); margin-bottom: 2rem;
+  font-size: clamp(2.75rem, 6vw, 5.5rem); font-weight: 700;
+  line-height: 0.98; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
-.page-hero-sub { font-size: 16px; color: #9a9a9a; max-width: 520px; line-height: 1.8; font-weight: 300; }
+.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 480px; line-height: 1.8; font-weight: 300; }
 
-.page-hero .grid-bg-dark {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.14) 1.5px, transparent 1.5px),
-    linear-gradient(90deg, rgba(255,255,255,0.14) 1.5px, transparent 1.5px);
-  background-size: 44px 44px;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 42%, black 65%);
-  mask-image: linear-gradient(to right, transparent 0%, transparent 42%, black 65%);
+.page-hero-graphic-col {
+  display: flex; justify-content: center; align-items: flex-end;
+}
+.careers-hero-graphic {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
 }
 
-    /* WHY */
+@media (max-width: 900px) {
+  .page-hero-row { grid-template-columns: 1fr; }
+  .page-hero-graphic-col { display: none; }
+}
+
+/* WHY */
 .why-section { padding: 8rem 5%; background: var(--white); }
 .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
 
@@ -182,8 +203,8 @@ export default function CareersContent() {
   margin-top: 3rem; padding: 2.5rem; border: 1px solid #e8e8e8; border-radius: 14px;
 }
 
-    /* DEPARTMENTS */
- .depts-section { padding: 8rem 5%; background: var(--white); border-top: none; }
+/* DEPARTMENTS */
+.depts-section { padding: 8rem 5%; background: var(--white); border-top: none; }
 
 .depts-section .section-title em { font-style: italic; font-weight: 300; color: #C9A07E; }
 
@@ -213,7 +234,7 @@ export default function CareersContent() {
 @media (max-width: 900px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .dept-grid { grid-template-columns: 1fr; } }
 
-    /* PROCESS */
+/* PROCESS */
 .process-section { padding: 8rem 5%; background: var(--white); border-top: none; text-align: center; }
 
 .process-section .section-tag,
@@ -243,8 +264,9 @@ export default function CareersContent() {
 @media (max-width: 480px) {
   .process-steps { grid-template-columns: 1fr; }
 }
-    /* CTA */
-   .career-cta {
+
+/* CTA */
+.career-cta {
   padding: 8rem 5%; text-align: center;
   background: radial-gradient(ellipse 70% 60% at 50% 0%, #221a12 0%, #1a1a1a 45%, #0d0d0d 100%);
 }
@@ -252,16 +274,17 @@ export default function CareersContent() {
 .career-cta .section-title { color: var(--white); margin: 0 auto 1.5rem; max-width: 600px; }
 .career-cta .section-title em { font-style: normal; font-weight: 700; color: #C9A07E; }
 .career-cta .section-body { color: #9a9a9a; margin: 0 auto 3rem; text-align: center; }
-    @media (max-width: 1024px) {
-      .dept-grid { grid-template-columns: 1fr 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      .process-steps::before { display: none; }
-    }
-    @media (max-width: 768px) {
-      .why-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .dept-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-    }
+
+@media (max-width: 1024px) {
+  .dept-grid { grid-template-columns: 1fr 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .process-steps::before { display: none; }
+}
+@media (max-width: 768px) {
+  .why-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .dept-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+}
   `}</style>
     </>
   );

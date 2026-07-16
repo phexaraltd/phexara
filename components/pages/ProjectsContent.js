@@ -121,18 +121,18 @@ export default function ProjectsContent() {
 
   return (
     <>
-      <section className="page-hero dark-section">
-        <div className="grid-bg grid-bg-dark" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}></div>
-        <div className="projects-hero-graphic-wrap">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/fire.png" alt="" aria-hidden="true" className="projects-hero-graphic" />
-        </div>
-        <div style={{ position: "relative", zIndex: 3 }}>
-          <p className="section-tag" data-anim="fade-up">Projects</p>
-          <h1 data-anim="fade-up" data-delay="100">Five systems.<br />Building <em>now.</em></h1>
-          <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA is in active development across five transformative projects. Each one is designed to solve a real problem at the intersection of intelligence, security, and infrastructure.</p>
-        </div>
-      </section>
+<section className="page-hero">
+  <div className="grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}></div>
+  <div className="projects-hero-graphic-wrap">
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img src="/fire.png" alt="" aria-hidden="true" className="projects-hero-graphic" />
+  </div>
+  <div style={{ position: "relative", zIndex: 3 }}>
+    <p className="section-tag" data-anim="fade-up">Projects</p>
+    <h1 data-anim="fade-up" data-delay="100">Five systems.<br />Building <em>now.</em></h1>
+    <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA is in active development across five transformative projects. Each one is designed to solve a real problem at the intersection of intelligence, security, and infrastructure.</p>
+  </div>
+</section>
 
       <div className="filter-bar">
         <span className="filter-label">Filter:</span>
@@ -259,45 +259,30 @@ export default function ProjectsContent() {
         </div>
       </section>
 
-      <style jsx>{`
+   <style jsx>{`
 .page-hero {
-  min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 75vh; display: flex; flex-direction: column; justify-content: flex-end;
   padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-  background: radial-gradient(ellipse 70% 60% at 10% 0%, #2a2016 0%, #1a1a1a 45%, #0d0d0d 100%);
+  background: var(--white); border-bottom: 1px solid #e8e8e8;
   position: relative; overflow: hidden;
 }
-.page-hero .section-tag { color: #C9A07E; }
+.page-hero .section-tag { color: #C9A07E; position: relative; z-index: 1; }
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-  line-height: 0.93; letter-spacing: -0.03em; color: var(--white); margin-bottom: 2rem;
+  line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
+  position: relative; z-index: 1;
 }
 .page-hero h1 :global(em) { font-style: italic; font-weight: 300; color: #C9A07E; }
-.page-hero-sub { font-size: 16px; color: #9a9a9a; max-width: 520px; line-height: 1.8; font-weight: 300; }
-
-.page-hero .grid-bg-dark {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.14) 1.5px, transparent 1.5px),
-    linear-gradient(90deg, rgba(255,255,255,0.14) 1.5px, transparent 1.5px);
-  background-size: 44px 44px;
-
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, transparent 42%, black 65%),
-    radial-gradient(ellipse 420px 420px at 82% 55%, transparent 0%, transparent 45%, black 80%);
-  mask-image:
-    linear-gradient(to right, transparent 0%, transparent 42%, black 65%),
-    radial-gradient(ellipse 420px 420px at 82% 55%, transparent 0%, transparent 45%, black 80%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-}
+.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; position: relative; z-index: 1; }
 
 .projects-hero-graphic-wrap {
   position: absolute;
-  top: 50%;
+  top: 65%;
   right: 6%;
   transform: translateY(-50%);
   width: 30%;
-  max-width: 380px;
+  max-width: 480px;
   min-width: 220px;
   z-index: 2;
   pointer-events: none;
@@ -310,10 +295,27 @@ export default function ProjectsContent() {
 }
 
 @media (max-width: 900px) {
-  .projects-hero-graphic-wrap { display: none; }
+  .projects-hero-graphic-wrap {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    transform: none;
+    z-index: 0;
+    opacity: 0.16;
+  }
+  .projects-hero-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
-   .filter-bar { padding: 2rem 5%; border-bottom: 1px solid #e8e8e8; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.filter-bar { padding: 2rem 5%; border-bottom: 1px solid #e8e8e8; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 .filter-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-400); margin-right: 0.5rem; }
 .filter-btn {
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -400,7 +402,8 @@ export default function ProjectsContent() {
   .project-card:nth-child(odd) { border-right: none; padding-right: 0; border-bottom: 1px solid #eee; }
   .project-card:nth-child(even) { padding-left: 0; }
 }
-       .vision-section { padding: 8rem 5%; background: var(--white); border-top: none; }
+
+.vision-section { padding: 8rem 5%; background: var(--white); border-top: none; }
 
 .vision-section .section-title em {
   font-style: italic;
@@ -415,7 +418,7 @@ export default function ProjectsContent() {
 .vt-content-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #C9A07E; font-weight: 600; margin-bottom: 6px; }
 .vt-content-text { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
 
-  .notify-section {
+.notify-section {
   padding: 8rem 5%; text-align: center; position: relative; overflow: hidden;
   background: radial-gradient(ellipse 70% 60% at 50% 0%, #221a12 0%, #1a1a1a 45%, #0d0d0d 100%);
 }
@@ -439,11 +442,12 @@ export default function ProjectsContent() {
   transition: all var(--transition); white-space: nowrap;
 }
 .notify-btn:hover { background: rgba(201,160,126,0.08); border-color: #e0b98d; }
-        @media (max-width: 768px) {
-          .projects-grid { grid-template-columns: 1fr; gap: 1px; }
-          .vision-inner { grid-template-columns: 1fr; gap: 3rem; }
-        }
-      `}</style>
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; gap: 1px; }
+  .vision-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+`}</style>
     </>
   );
 }

@@ -4,14 +4,20 @@ export default function IndustriesContent() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
-    <div style={{position: "relative", zIndex: "1"}}>
+<section className="page-hero">
+  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  <div className="page-hero-row">
+    <div className="page-hero-text">
       <p className="section-tag" data-anim="fade-up">Industries</p>
       <h1 data-anim="fade-up" data-delay="100">Technology for every<br />critical <em>sector</em></h1>
       <p className="page-hero-sub" data-anim="fade-up" data-delay="200">PHEXARA&apos;s solutions are designed to deliver real impact across the industries that shape modern society — from financial services to healthcare, smart cities to energy.</p>
     </div>
-  </section>
+    <div className="page-hero-graphic-col">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/earthtwo.png" alt="" aria-hidden="true" className="industries-hero-graphic" />
+    </div>
+  </div>
+</section>
 
   <section className="industries-section">
     <div className="ind-grid">
@@ -89,23 +95,68 @@ export default function IndustriesContent() {
   </section>
 
   
-      <style jsx>{`
-    .page-hero {
-      min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end;
-      padding: calc(var(--nav-height) + 5rem) 5% 5rem;
-      background: var(--white); border-bottom: 1px solid #e8e8e8; position: relative; overflow: hidden;
-    }
-    .page-hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-      line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
-    }
-   .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
-    .page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; }
-
-   .industries-section { padding: 8rem 5%; background: var(--white); }
+<style jsx>{`
+.page-hero {
+  min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: calc(var(--nav-height) + 5rem) 5% 5rem;
+  background: var(--white); border-bottom: 1px solid #e8e8e8; position: relative; overflow: hidden;
+}
+.page-hero .section-tag { color: #C9A07E; }
+.page-hero-row {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.page-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
+.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 480px; line-height: 1.8; font-weight: 300; }
+.page-hero-graphic-col {
+  display: flex; justify-content: center; align-items: center;
+}
+.industries-hero-graphic {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .page-hero-row {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .page-hero-graphic-col {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.16;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .industries-hero-graphic {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+  .page-hero-text {
+    position: relative;
+    z-index: 1;
+  }
+}
+.industries-section { padding: 8rem 5%; background: var(--white); }
 .ind-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; background: transparent; margin-top: 4rem; }
-
 .ind-card {
   background: var(--white); padding: 1.5rem; margin: -1.5rem; border-radius: 14px; position: relative;
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
@@ -118,10 +169,8 @@ export default function IndustriesContent() {
 }
 .ind-card:hover .ind-icon { border-color: #C9A07E; color: #C9A07E; }
 .ind-card:hover .ind-cap span { border-color: #C9A07E; color: #C9A07E; background: #fff; }
-
 .ind-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ccc; margin-bottom: 1.5rem; transition: color var(--transition); }
 .ind-card:hover .ind-num { color: #C9A07E; }
-
 .ind-icon {
   font-size: 1.6rem; margin-bottom: 1.25rem; color: var(--black); transition: all var(--transition); display: flex;
   width: 44px; height: 44px; border: 1px solid #e0e0e0; border-radius: 10px;
@@ -136,7 +185,7 @@ export default function IndustriesContent() {
   transition: all var(--transition);
 }
 @media (max-width: 768px) { .ind-grid { grid-template-columns: 1fr; gap: 3rem; } }
-  `}</style>
+`}</style>
     </>
   );
 }

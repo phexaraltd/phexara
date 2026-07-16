@@ -2,10 +2,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
-import CustomCursor from "@/components/CustomCursor";
 import PageTransition from "@/components/PageTransition";
 import SiteEffects from "@/components/SiteEffects";
-
 export const metadata = {
   metadataBase: new URL("https://www.phexara.co.uk"),
   icons: {
@@ -43,7 +41,6 @@ export const metadata = {
     images: ["/banner.png"],
   },
 };
-
 export default function RootLayout({ children }) {
   const organizationJsonLd = {
     "@context": "https://schema.org",
@@ -70,7 +67,6 @@ export default function RootLayout({ children }) {
       "Smart Commerce",
     ],
   };
-
   return (
     <html lang="en">
       <body>
@@ -80,7 +76,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <Loader />
-        <CustomCursor />
         <PageTransition />
         <Header />
         {children}

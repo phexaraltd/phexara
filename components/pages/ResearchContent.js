@@ -4,14 +4,20 @@ export default function ResearchContent() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
-    <div style={{position: "relative", zIndex: "1"}}>
+ <section className="page-hero">
+  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  <div className="page-hero-row">
+    <div className="page-hero-text">
       <p className="section-tag" data-anim="fade-up">Research & Innovation</p>
       <h1 data-anim="fade-up" data-delay="100">At the edge of<br />what&apos;s <em>possible</em></h1>
       <p className="page-hero-sub" data-anim="fade-up" data-delay="200">Our research agenda spans the most critical frontiers of intelligent systems — from agentic AI safety to quantum-resistant security infrastructure.</p>
     </div>
-  </section>
+    <div className="page-hero-graphic-col">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/earth.png" alt="" aria-hidden="true" className="research-hero-graphic" />
+    </div>
+  </div>
+</section>
 
  <section className="research-main">
   <div className="research-inner">
@@ -112,22 +118,73 @@ export default function ResearchContent() {
   </section>
 
   
-      <style jsx>{`
+<style jsx>{`
 .page-hero {
   min-height: 60vh; display: flex; flex-direction: column; justify-content: flex-end;
   padding: calc(var(--nav-height) + 5rem) 5% 5rem;
   background: var(--white); border-bottom: 1px solid #e8e8e8;
   position: relative; overflow: hidden;
 }
+.page-hero .section-tag { color: #C9A07E; position: relative; z-index: 1; }
+
+.page-hero-row {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-  line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 2rem;
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
-.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; }
+.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 480px; line-height: 1.8; font-weight: 300; }
 
-    /* RESEARCH AREAS */
+.page-hero-graphic-col {
+  display: flex; justify-content: center; align-items: center;
+}
+.research-hero-graphic {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .page-hero-row {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .page-hero-graphic-col {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.16;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .research-hero-graphic {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+  .page-hero-text {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* RESEARCH AREAS */
 .research-main { padding: 8rem 5%; }
 .research-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 8rem; }
 
@@ -186,8 +243,8 @@ export default function ResearchContent() {
   .research-cards .rc:nth-child(even) { padding-left: 0; }
 }
 
-    /* PUBLICATIONS PLACEHOLDER */
-  .pubs-section { padding: 8rem 5%; background: #EDE9E1; border-top: none; }
+/* PUBLICATIONS PLACEHOLDER */
+.pubs-section { padding: 8rem 5%; background: #EDE9E1; border-top: none; }
 
 .pubs-section .section-title em { font-style: italic; font-weight: 300; color: #C9A07E; }
 
@@ -220,7 +277,7 @@ export default function ResearchContent() {
   .pub-row { grid-template-columns: 1fr; gap: 1rem; text-align: left; }
   .pub-status { justify-self: start; }
 }
-  `}</style>
+`}</style>
     </>
   );
 }

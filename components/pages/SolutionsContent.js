@@ -245,8 +245,8 @@ export default function SolutionsContent() {
   </section>
 
   
-      <style jsx>{`
- .page-hero {
+<style jsx>{`
+.page-hero {
   min-height: 55vh; display: flex; flex-direction: column; justify-content: flex-end;
   padding: calc(var(--nav-height) + 5rem) 5% 5rem;
   background: var(--white); position: relative; overflow: hidden;
@@ -254,22 +254,26 @@ export default function SolutionsContent() {
 }
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.25rem, 5vw, 4.85rem);   /* was: clamp(3rem, 7vw, 7rem) — reduced */
-  line-height: 1.05;                          /* was: 0.93 — slightly looser so it doesn't feel cramped */
+  font-size: clamp(2.25rem, 5vw, 4.85rem);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 2rem;
-  max-width: 680px;                            /* NEW — stops the text from running under the image */
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
 .page-hero-sub {
   font-size: 16px;
   color: var(--gray-500);
-  max-width: 480px;                             /* was: 520px — pulled in slightly to match */
+  max-width: 480px;
   line-height: 1.8;
   font-weight: 300;
+  position: relative;
+  z-index: 1;
 }
-.page-hero .section-tag { color: #C9A07E; }
+.page-hero .section-tag { color: #C9A07E; position: relative; z-index: 1; }
 
 .hex-cluster {
   position: absolute;
@@ -285,7 +289,20 @@ export default function SolutionsContent() {
 }
 
 @media (max-width: 900px) {
-  .hex-cluster { display: none; }
+  .hex-cluster {
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    transform: none;
+    opacity: 0.14;
+    object-fit: cover;
+    object-position: center;
+  }
 }
     /* SOL NAV */
    .sol-nav { padding: 2.5rem 5%; border-bottom: none; background: #EDE9E1; }
@@ -313,7 +330,7 @@ export default function SolutionsContent() {
 }
     /* SOLUTIONS DETAIL */
   .sol-section { padding: 8rem 5%; border-bottom: 1px solid #eee; }
-.sol-section:nth-child(even) { background: var(--white); }  /* no more gray alternating — screenshot is consistently white */
+.sol-section:nth-child(even) { background: var(--white); }
 
 .sol-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8rem; align-items: start; }
 .sol-inner.reverse { direction: rtl; }
@@ -370,7 +387,7 @@ export default function SolutionsContent() {
   .sol-inner.reverse { direction: ltr; }
   .sol-meta { position: static; }
 }
-  `}</style>
+`}</style>
     </>
   );
 }

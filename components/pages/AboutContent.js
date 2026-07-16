@@ -4,8 +4,8 @@ export default function AboutContent() {
   return (
     <>
 
-<section className="page-hero dark-section">
-  <div className="grid-bg grid-bg-dark" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+<section className="page-hero">
+  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
   <img src="/phexaraicon.png" alt="" aria-hidden="true" className="page-hero-watermark" />
   <div style={{position: "relative", zIndex: "1"}}>
     <p className="page-hero-label" data-anim="fade-up">About PHEXARA</p>
@@ -191,10 +191,10 @@ export default function AboutContent() {
 
   
       <style jsx>{`
-  .page-hero {
+.page-hero {
   min-height: 65vh; display: flex; flex-direction: column;
   justify-content: flex-end; padding: calc(var(--nav-height) + 5rem) 5% 6rem;
-  background: radial-gradient(ellipse 70% 60% at 10% 20%, #2a2016 0%, #1a1a1a 45%, #0d0d0d 100%);
+  background: var(--white); border-bottom: 1px solid #e8e8e8;
   position: relative; overflow: hidden;
 }
 
@@ -203,12 +203,12 @@ export default function AboutContent() {
   top: 50%;
   right: 4%;
   transform: translateY(-50%);
-  width: 34%;
-  max-width: 420px;
-  min-width: 220px;
+  width: 30%;
+  max-width: 380px;
+  min-width: 200px;
   height: auto;
-  opacity: 0.14;
-  filter: grayscale(1) brightness(1.6);
+  opacity: 1;
+  filter: none;
   pointer-events: none;
   z-index: 0;
   user-select: none;
@@ -216,16 +216,16 @@ export default function AboutContent() {
 
 .page-hero-label {
   font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: #C9A07E; margin-bottom: 2rem;
+  color: #C9A07E; margin-bottom: 2rem; position: relative; z-index: 1;
 }
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-  line-height: 0.95; letter-spacing: -0.03em; color: var(--white);
-  margin-bottom: 2rem;
+  line-height: 0.95; letter-spacing: -0.03em; color: var(--black);
+  margin-bottom: 2rem; position: relative; z-index: 1;
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
-.page-hero-sub { font-size: 16px; color: #9a9a9a; max-width: 560px; line-height: 1.8; font-weight: 300; }
+.page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 560px; line-height: 1.8; font-weight: 300; position: relative; z-index: 1; }
 
 @media (max-width: 768px) {
   .page-hero-watermark {

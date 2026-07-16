@@ -57,7 +57,7 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
   const socialCells = SOCIAL_LINKS
     .map(
       (s) => `
-    <td style="padding-right:8px;">
+    <td style="padding-right:14px;">
       <a href="${s.href}" target="_blank" style="text-decoration:none;display:inline-block;">
         <img src="${s.imgUrl}" width="16" height="16" alt="" style="display:block;border:0;" />
       </a>
@@ -69,17 +69,17 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
   return `
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; border-collapse: collapse;">
   <tr>
-    <td style="padding-bottom: 2px;">
+    <td style="padding-bottom: 6px;">
       <div style="font-size: 16px; font-weight: 700; color: #0a0a0a; line-height: 1.3;">${first} ${last}</div>
     </td>
   </tr>
   <tr>
-    <td style="padding-bottom: 10px;">
+    <td style="padding-bottom: 14px;">
       <div style="font-size: 13px; color: #5a5a5a; line-height: 1.3;">${title}</div>
     </td>
   </tr>
   <tr>
-    <td style="padding-bottom: 8px;">
+    <td style="padding-bottom: 12px;">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td style="padding-right: 8px;" valign="middle">
@@ -93,14 +93,14 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
     </td>
   </tr>
   <tr>
-    <td style="padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
-      <div style="font-size: 11.5px; color: #8a8a8a; font-style: italic; line-height: 1.4; padding-bottom: 12px;">${VISION_STATEMENT}</div>
+    <td style="padding-bottom: 16px; border-bottom: 1px solid #e0e0e0;">
+      <div style="font-size: 11.5px; color: #8a8a8a; font-style: italic; line-height: 1.4; padding-bottom: 16px;">${VISION_STATEMENT}</div>
     </td>
   </tr>
-  <tr>
-    <td style="padding-top: 10px; padding-bottom: 10px;">
+<tr>
+    <td style="padding-top: 16px; padding-bottom: 16px;">
       <div style="font-size: 12px;">
-        <a href="mailto:${mail}" style="color: #0a0a0a; text-decoration: none;">${mail}</a>
+        <a href="https://www.phexara.co.uk" style="color: #0a0a0a; text-decoration: none;">www.phexara.co.uk</a>
         &nbsp;|&nbsp;
         <a href="https://www.phexara.co.uk" style="color: #0a0a0a; text-decoration: none;">phexara.co.uk</a>
       </div>
@@ -108,8 +108,16 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
   </tr>
   <tr>
     <td>
-      <div style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #999999; margin-bottom: 6px;">Follow Us</div>
-      <table cellpadding="0" cellspacing="0" border="0"><tr>${socialCells}</tr></table>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="padding-right: 12px;" valign="middle">
+            <div style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #999999;">Follow Us</div>
+          </td>
+          <td valign="middle">
+            <table cellpadding="0" cellspacing="0" border="0"><tr>${socialCells}</tr></table>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </table>`.trim();
@@ -254,4 +262,4 @@ export default function SignatureGeneratorContent() {
       `}</style>
     </div>
   );
-}
+}3

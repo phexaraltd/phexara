@@ -54,10 +54,11 @@ function buildSignatureHtml({ firstName, lastName, jobTitle, email }) {
   const title = jobTitle.trim() || "Job Title";
   const mail = email.trim() || "name@phexara.co.uk";
 
-  const socialCells = SOCIAL_LINKS
+const socialCells = SOCIAL_LINKS
     .map(
-      (s) => `
-    <td style="padding-right:14px;">
+      (s, i) => `
+    ${i > 0 ? '<td style="width:12px; font-size:1px; line-height:1px;">&nbsp;</td>' : ""}
+    <td>
       <a href="${s.href}" target="_blank" style="text-decoration:none;display:inline-block;">
         <img src="${s.imgUrl}" width="16" height="16" alt="" style="display:block;border:0;" />
       </a>

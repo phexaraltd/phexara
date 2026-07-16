@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/mysql";
+import { uploadImage } from "@/lib/api-client";
 
 const MAX_SIZE_BYTES = 5 * 1024 * 1024;
 const ALLOWED_TYPES = ["image/png", "image/jpeg", "image/webp", "image/gif"];
@@ -28,12 +28,8 @@ export async function POST(request) {
   }
 
   try {
-    const bytes = Buffer.from(await file.arrayBuffer());
-    const result = await query(
-      "INSERT INTO images (data, content_type, filename) VALUES (?, ?, ?)",
-      [bytes, file.type, file.name]
-    );
-    return NextResponse.json({ url: `/api/images/${result.insertId}` });
+    const result = await uploadImage(file);
+    return NextResponse.json({ url: result.url });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }

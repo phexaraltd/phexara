@@ -205,7 +205,7 @@ export default function ProjectsContent() {
           <div data-anim="fade-right">
             <div className="vision-timeline">
               <div className="vt-item">
-                <div className="vt-year">2024-2025</div>
+                <div className="vt-year">2025</div>
                 <div>
                   <div className="vt-content-label">Foundation</div>
                   <div className="vt-content-text">Company formation, team building, core technology stack selection, initial R&amp;D, and security framework design.</div>

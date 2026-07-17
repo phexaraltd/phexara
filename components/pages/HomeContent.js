@@ -200,7 +200,7 @@ export default function HomeContent() {
           <div className="sol-card" data-anim="fade-up" data-delay="300">
             <div className="sol-num">06</div>
             <div className="sol-symbol">⬡</div>
-            <div className="sol-title">RAI Responsible AI & SbD Systems</div>
+            <div className="sol-title">RAI (Responsible AI) & SbD Systems.</div>
             <div className="sol-desc">Real-time decision systems, autonomous monitoring, smart cities, industrial IoT, and connected sensor networks.</div>
             <div className="sol-arrow">↗</div>
           </div>

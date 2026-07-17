@@ -133,26 +133,38 @@ export default function IndustriesContent() {
     grid-template-columns: 1fr;
     position: relative;
   }
+  .page-hero-text {
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (max-width: 768px) {
   .page-hero-graphic-col {
     display: flex;
     position: absolute;
-    inset: 0;
+    top: 50%;
+    right: -5%;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 55%;
     z-index: 0;
-    opacity: 0.16;
+    opacity: 0.1;
     pointer-events: none;
     justify-content: center;
     align-items: center;
   }
   .industries-hero-graphic {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: none;
-    object-fit: cover;
-    object-position: center;
   }
-  .page-hero-text {
-    position: relative;
-    z-index: 1;
+}
+@media (max-width: 480px) {
+  .page-hero-graphic-col {
+    width: 70%;
+    right: -15%;
+    opacity: 0.08;
   }
 }
 .industries-section { padding: 8rem 5%; background: var(--white); }

@@ -178,7 +178,37 @@ export default function CareersContent() {
 
 @media (max-width: 900px) {
   .page-hero-row { grid-template-columns: 1fr; }
-  .page-hero-graphic-col { display: none; }
+}
+
+@media (max-width: 768px) {
+  .page-hero-graphic-col {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 55%;
+    z-index: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .careers-hero-graphic {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero-graphic-col {
+    width: 70%;
+    right: -15%;
+    opacity: 0.08;
+  }
 }
 
 /* WHY */

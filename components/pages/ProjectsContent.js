@@ -268,10 +268,13 @@ export default function ProjectsContent() {
 }
 .page-hero .section-tag { color: #C9A07E; position: relative; z-index: 1; }
 .page-hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
-  line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
+  // font-family: 'Space Grotesk', sans-serif;
+  // font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
+  // line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
   position: relative; z-index: 1;
+    font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
+  line-height: 0.95; letter-spacing: -0.03em; color: var(--black);
 }
 .page-hero h1 :global(em) { font-style: italic; font-weight: 300; color: #C9A07E; }
 .page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; position: relative; z-index: 1; }
@@ -294,24 +297,24 @@ export default function ProjectsContent() {
   height: auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .projects-hero-graphic-wrap {
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    top: 65%;
+    right: -5%;
+    transform: translateY(-50%);
+    width: 55%;
     max-width: none;
     min-width: 0;
-    transform: none;
     z-index: 0;
-    opacity: 0.16;
+    opacity: 0.1;
   }
-  .projects-hero-graphic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+}
+
+@media (max-width: 480px) {
+  .projects-hero-graphic-wrap {
+    width: 70%;
+    right: -15%;
+    opacity: 0.08;
   }
 }
 

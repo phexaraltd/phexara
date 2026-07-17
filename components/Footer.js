@@ -8,7 +8,7 @@ export default function Footer() {
           {/* <div className="footer-brand-name">PHEXARA, LTD</div>
           <div className="footer-tagline">Engineering Intelligent Systems for a Secure Digital Future</div> */}
              <Link href="/" className="nav-logo">
-                    <img src="/phexaraicon.png" alt="PHEXARA, LTD" className="nav-logo-img" />
+                    <img src="/phexara.svg" alt="PHEXARA, LTD" className="nav-logo-img" />
                   </Link>
         <div style={{ marginTop: "2rem", display: "flex", gap: "1rem" }}>
   <a href="https://www.linkedin.com/company/phexara-ltd/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">

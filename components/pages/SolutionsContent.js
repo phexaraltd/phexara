@@ -253,15 +253,18 @@ export default function SolutionsContent() {
   border-bottom: 1px solid #e8e8e8;
 }
 .page-hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.25rem, 5vw, 4.85rem);
-  line-height: 1.05;
+  // font-family: 'Space Grotesk', sans-serif;
+  // font-size: clamp(2.25rem, 5vw, 4.85rem);
+  // line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 2rem;
   max-width: 680px;
   position: relative;
   z-index: 1;
+    font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
+  line-height: 0.95; letter-spacing: -0.03em; color: var(--black);
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
 .page-hero-sub {
@@ -302,6 +305,25 @@ export default function SolutionsContent() {
     opacity: 0.14;
     object-fit: cover;
     object-position: center;
+  }
+}
+  @media (max-width: 768px) {
+  .hex-cluster {
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+    width: 55%;
+    max-width: none;
+    min-width: 0;
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hex-cluster {
+    width: 70%;
+    right: -15%;
+    opacity: 0.08;
   }
 }
     /* SOL NAV */

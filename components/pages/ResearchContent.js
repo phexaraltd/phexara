@@ -136,12 +136,15 @@ export default function ResearchContent() {
 }
 
 .page-hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.75rem, 6vw, 5.5rem);
-  line-height: 0.98;
+  // font-family: 'Space Grotesk', sans-serif;
+  // font-size: clamp(2.75rem, 6vw, 5.5rem);
+  // line-height: 0.98;
   letter-spacing: -0.03em;
   color: var(--black);
   margin-bottom: 2rem;
+   font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
+  line-height: 0.95; letter-spacing: -0.03em; color: var(--black);
 }
 .page-hero h1 em { font-style: italic; font-weight: 300; color: #C9A07E; }
 .page-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 480px; line-height: 1.8; font-weight: 300; }
@@ -161,26 +164,40 @@ export default function ResearchContent() {
     grid-template-columns: 1fr;
     position: relative;
   }
+  .page-hero-text {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
   .page-hero-graphic-col {
     display: flex;
     position: absolute;
-    inset: 0;
+    top: 50%;
+    right: -5%;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 55%;
     z-index: 0;
-    opacity: 0.16;
+    opacity: 0.1;
     pointer-events: none;
     justify-content: center;
     align-items: center;
   }
   .research-hero-graphic {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: none;
-    object-fit: cover;
-    object-position: center;
   }
-  .page-hero-text {
-    position: relative;
-    z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .page-hero-graphic-col {
+    width: 70%;
+    right: -15%;
+    opacity: 0.08;
   }
 }
 

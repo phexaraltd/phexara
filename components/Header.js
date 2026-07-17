@@ -41,14 +41,14 @@ export default function Header() {
     <>
       <nav className={`nav${scrolled ? " scrolled" : ""}`} id="main-nav">
         <Link href="/" className="nav-logo">
-          <img src="/phexaralogo.png" alt="PHEXARA, LTD" className="nav-logo-img" />
+          <img src="/phexara.svg" alt="PHEXARA" className="nav-logo-img" />
         </Link>
         <ul className="nav-links">
-          <li>
+          {/* <li>
             <Link href="/" className={isActive("/") ? "active" : undefined}>
               Home
             </Link>
-          </li>
+          </li> */}
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className={isActive(link.href) ? "active" : undefined}>
@@ -64,7 +64,7 @@ export default function Header() {
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
             aria-label="Menu"
-            onClick={() => setMenuOpen((v) => !v)}
+            onClick={() => setMenuOpen((v) => !v)}v 
           >
             <span></span>
             <span></span>

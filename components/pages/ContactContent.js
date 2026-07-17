@@ -161,6 +161,7 @@ export default function ContactContent() {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(3rem, 7vw, 7rem); font-weight: 700;
   line-height: 0.93; letter-spacing: -0.03em; color: var(--black); margin-bottom: 2rem;
+  
 }
 .contact-hero h1 :global(em) { font-style: italic; font-weight: 300; color: #C9A07E; }
 .contact-hero-sub { font-size: 16px; color: var(--gray-500); max-width: 520px; line-height: 1.8; font-weight: 300; }

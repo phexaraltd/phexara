@@ -265,13 +265,13 @@ export default function AdminContent() {
             Feature this post at the top of the blog page
           </label>
 
-          <label>Content (Markdown — use ## for headings, **bold**, blank lines between paragraphs)</label>
+          <label>Content (Markdown — ## headings, **bold**, [link text](https://url), press Enter for a line break, blank line for a new paragraph. For a call-to-action button use [button: Label](https://url))</label>
           <textarea
             value={form.content}
             onChange={(e) => setForm({ ...form, content: e.target.value })}
             rows={16}
             required
-            placeholder="## Section heading&#10;&#10;Write your post here..."
+            placeholder="## Section heading&#10;&#10;Write your post here...&#10;&#10;[button: Get More Info](https://phexara.co.uk/contact)"
           />
 
           <div className="actions">

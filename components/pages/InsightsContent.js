@@ -27,7 +27,7 @@ export default function InsightsContent({ posts, categories }) {
     <>
 
   <section className="page-hero">
-    <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+    {/* <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div> */}
     <div style={{position: "relative", zIndex: "1"}}>
       <p className="section-tag" data-anim="fade-up">Insights Hub</p>
       <h1 data-anim="fade-up" data-delay="100">Ideas from the<br /><em>frontier</em></h1>

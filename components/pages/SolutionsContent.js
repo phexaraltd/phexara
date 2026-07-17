@@ -33,7 +33,7 @@ export default function SolutionsContent() {
     <>
 
 <section className="page-hero">
-  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  {/* <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div> */}
   {/* eslint-disable-next-line @next/next/no-img-element */}
   <img src="/node.png" alt="" aria-hidden="true" className="hex-cluster" />
   <div style={{position: "relative", zIndex: "1"}}>

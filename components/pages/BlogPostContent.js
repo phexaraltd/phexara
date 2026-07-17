@@ -12,7 +12,7 @@ export default function BlogPostContent({ post, contentHtml, related }) {
   return (
     <>
       <section className="post-hero">
-        <div className="grid-bg-dark grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div>
+        {/* <div className="grid-bg-dark grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div> */}
         <div style={{ position: "relative", zIndex: 1 }}>
           <Link href="/blog" className="back-link">← Back to Blog</Link>
           <p className="post-cat">{post.category}{post.format ? ` · ${post.format}` : ""}</p>
@@ -89,6 +89,13 @@ export default function BlogPostContent({ post, contentHtml, related }) {
         .post-body :global(li) { font-size: 16px; line-height: 1.85; color: var(--gray-600); font-weight: 300; margin-bottom: 0.5rem; }
         .post-body :global(strong) { font-weight: 600; color: var(--black); }
         .post-body :global(a) { color: #C9A07E; text-decoration: underline; }
+        .post-body :global(.post-cta-link) {
+          display: inline-block; margin: 0.25rem 0 1.5rem;
+          color: var(--black); font-weight: 600;
+          text-decoration: underline; text-underline-offset: 3px;
+          transition: color var(--transition);
+        }
+        .post-body :global(.post-cta-link:hover) { color: #C9A07E; }
 
         .post-cta {
           margin-top: 4rem; padding: 2.5rem; border-top: none;

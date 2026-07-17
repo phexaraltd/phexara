@@ -209,7 +209,7 @@ export default function HomeContent() {
 
       {/* PROJECTS PREVIEW */}
       <section className="projects-section dark-section">
-        <div className="grid-bg-dark grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div>
+        {/* <div className="grid-bg-dark grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div> */}
         <div style={{ position: "relative", zIndex: 1 }}>
           <div className="projects-header">
             <div>

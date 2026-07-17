@@ -122,7 +122,7 @@ export default function ProjectsContent() {
   return (
     <>
 <section className="page-hero">
-  <div className="grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}></div>
+  {/* <div className="grid-bg" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}></div> */}
   <div className="projects-hero-graphic-wrap">
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img src="/fire.png" alt="" aria-hidden="true" className="projects-hero-graphic" />

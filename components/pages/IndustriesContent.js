@@ -5,7 +5,7 @@ export default function IndustriesContent() {
     <>
 
 <section className="page-hero">
-  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  {/* <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div> */}
   <div className="page-hero-row">
     <div className="page-hero-text">
       <p className="section-tag" data-anim="fade-up">Industries</p>

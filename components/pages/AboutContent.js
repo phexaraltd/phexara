@@ -5,7 +5,7 @@ export default function AboutContent() {
     <>
 
 <section className="page-hero">
-  <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div>
+  {/* <div className="grid-bg" style={{position: "absolute", inset: "0", pointerEvents: "none"}}></div> */}
   <img src="/phexaraicon.png" alt="" aria-hidden="true" className="page-hero-watermark" />
   <div style={{position: "relative", zIndex: "1"}}>
     <p className="page-hero-label" data-anim="fade-up">About PHEXARA</p>

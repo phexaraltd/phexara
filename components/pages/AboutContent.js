@@ -173,11 +173,11 @@ export default function AboutContent() {
         </div>
         <div className="trust-col" data-anim="fade-up" data-delay="200">
           <h3>Standards Alignment</h3>
-          <p>All PHEXARA systems are designed around internationally recognized frameworks including ISO 27001, the NIST Cybersecurity Framework, GDPR, PCI DSS, and emerging AI governance standards.</p>
+          <p>All PHEXARA systems are designed around internationally recognized frameworks including the NIST Cybersecurity Framework, GDPR, PCI DSS, and emerging AI governance standards.</p>
         </div>
       </div>
       <div className="standards-row" data-anim="fade-up" data-delay="200">
-        <span className="std-badge">ISO 27001</span>
+        {/* <span className="std-badge">ISO 27001</span> */}
         <span className="std-badge">NIST CSF</span>
         <span className="std-badge">GDPR</span>
         <span className="std-badge">EU AI Act</span>

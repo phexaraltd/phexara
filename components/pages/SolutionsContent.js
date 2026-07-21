@@ -96,7 +96,7 @@ export default function SolutionsContent() {
         <div className="sol-number">02 / 06</div>
         <h2 className="sol-title-lg">AI Governance</h2>
         <p className="sol-body">As AI systems become embedded in critical decisions, the need for robust governance has never been greater. We help organizations deploy AI responsibly — with full auditability, fairness mechanisms, and compliance frameworks.</p>
-        <p className="sol-body">Our AI governance practice is built on international standards including the EU AI Act, NIST AI RMF, and ISO/IEC 42001, combined with deep technical AI expertise.</p>
+        <p className="sol-body">Our AI governance practice is built on international standards including the EU AI Act, NIST AI RMF, and combined with deep technical AI expertise.</p>
         <Link href="/contact" className="sol-cta-link">Discuss AI governance <span>→</span></Link>
       </div>
       <div data-anim="fade-left">
@@ -113,7 +113,7 @@ export default function SolutionsContent() {
           <li>Human Oversight Mechanisms</li>
         </ul>
         <div className="tech-tags">
-          <span className="badge">EU AI Act</span><span className="badge">ISO 42001</span><span className="badge">NIST AI RMF</span>
+          <span className="badge">EU AI Act</span><span className="badge">NIST AI RMF</span>
           <span className="badge">SHAP</span><span className="badge">LIME</span><span className="badge">Fairlearn</span>
         </div>
       </div>
@@ -172,10 +172,10 @@ export default function SolutionsContent() {
           <li>Application Security Reviews</li>
           <li>SOC Setup & Managed Security</li>
           <li>Incident Response Planning</li>
-          <li>Compliance & Governance (ISO 27001, GDPR)</li>
+          {/* <li>Compliance & Governance (ISO 27001, GDPR)</li> */}
         </ul>
         <div className="tech-tags">
-          <span className="badge">ISO 27001</span><span className="badge">NIST CSF</span><span className="badge">OWASP</span>
+         <span className="badge">NIST CSF</span><span className="badge">OWASP</span>
           <span className="badge">CIS Benchmarks</span><span className="badge">SIEM</span><span className="badge">EDR</span>
         </div>
       </div>

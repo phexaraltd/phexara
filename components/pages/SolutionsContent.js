@@ -96,7 +96,7 @@ export default function SolutionsContent() {
         <div className="sol-number">02 / 06</div>
         <h2 className="sol-title-lg">AI Governance</h2>
         <p className="sol-body">As AI systems become embedded in critical decisions, the need for robust governance has never been greater. We help organizations deploy AI responsibly — with full auditability, fairness mechanisms, and compliance frameworks.</p>
-        <p className="sol-body">Our AI governance practice is built on international standards including the EU AI Act, NIST AI RMF, and combined with deep technical AI expertise.</p>
+        <p className="sol-body">Our AI governance practice is built to align with international standards including the EU AI Act, NIST AI RMF, and combined with deep technical AI expertise.</p>
         <Link href="/contact" className="sol-cta-link">Discuss AI governance <span>→</span></Link>
       </div>
       <div data-anim="fade-left">
@@ -121,31 +121,31 @@ export default function SolutionsContent() {
   </section>
   
   {/* 03 DIGITAL TWINS */}
-  <section className="sol-section" id="security">
+<section className="sol-section" id="security">
     <div className="sol-inner">
       <div className="sol-meta" data-anim="fade-left">
         <div className="sol-number">03 / 06</div>
         <h2 className="sol-title-lg">Cloud Security</h2>
-        <p className="sol-body">Digital twins are virtual models of physical systems that enable real-time monitoring, simulation, and prediction. We build twin ecosystems that transform how organizations manage assets, infrastructure, and operations.</p>
-        <p className="sol-body">From manufacturing plants to smart buildings, our digital twin platforms close the loop between the physical and digital world.</p>
+        <p className="sol-body">Cloud security is the discipline of protecting data, workloads, and infrastructure as organisations move from on-premise systems to elastic, provider-managed environments. We design security architectures that scale with your cloud footprint, not against it.</p>
+        <p className="sol-body">From identity and access control to data-level protection and compliance monitoring, our cloud security practice closes the gaps that emerge as environments grow across providers, teams, and regions.</p>
         <Link href="/contact" className="sol-cta-link">Explore Cloud Security <span>→</span></Link>
       </div>
       <div data-anim="fade-right">
         <ul className="services-list">
-          <li>Industrial Digital Twin Development</li>
-          <li>Real-Time Asset Monitoring</li>
-          <li>Predictive Maintenance Systems</li>
-          <li>Simulation & Scenario Modelling</li>
-          <li>Smart Infrastructure Twins</li>
-          <li>Energy & Utilities Optimisation</li>
-          <li>Supply Chain Digital Twins</li>
-          <li>Building & Facility Management</li>
-          <li>Integration with IoT Sensor Networks</li>
-          <li>AI-Powered Anomaly Detection</li>
+          <li>Cloud Architecture & Migration Security</li>
+          <li>Identity & Access Management (IAM)</li>
+          <li>Column & Row-Level Data Protection</li>
+          <li>VPC & Network Perimeter Controls</li>
+          <li>Multi-Cloud Security Posture Management</li>
+          <li>Compliance & Audit Readiness</li>
+          <li>Data Encryption & Key Management</li>
+          <li>Threat Detection & Incident Response</li>
+          <li>Zero Trust Architecture</li>
+          <li>Cloud Access Security Brokering (CASB)</li>
         </ul>
         <div className="tech-tags">
-          <span className="badge">Unity/Unreal</span><span className="badge">Azure Digital Twins</span>
-          <span className="badge">MQTT</span><span className="badge">Time Series DB</span><span className="badge">SCADA</span>
+          <span className="badge">AWS</span><span className="badge">Azure</span>
+          <span className="badge">Google Cloud</span><span className="badge">IAM</span><span className="badge">Zero Trust</span>
         </div>
       </div>
     </div>

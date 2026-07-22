@@ -152,31 +152,31 @@ export default function SolutionsContent() {
   </section>
 
   {/* 04 CLOUD SECURITY */}
-  <section className="sol-section" id="Applied">
+<section className="sol-section" id="Applied">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
         <div className="sol-number">04 / 06</div>
         <h2 className="sol-title-lg">Applied AI & Vertical SaaS</h2>
-        <p className="sol-body">Enterprise-grade protection built into every layer of your digital stack. Our security practice combines deep offensive knowledge with robust defensive architecture — providing the full picture that organizations need to stay resilient.</p>
-        <p className="sol-body">From penetration testing to zero trust architecture, we build security programs that scale with your organization.</p>
+        <p className="sol-body">Applied AI & Vertical SaaS is about building AI-native software products purpose-fit for a single industry, not generic tools stretched to cover everyone. We design and build platforms where the AI isn't a bolt-on feature — it's the core of how the product works.</p>
+        <p className="sol-body">From first prototype to a scaled, multi-tenant platform, we help organisations turn domain expertise into software that ships, sells, and holds up under real usage.</p>
         <Link href="/contact" className="sol-cta-link">Get a Vertical SaaS <span>→</span></Link>
       </div>
       <div data-anim="fade-left">
         <ul className="services-list"> 
-          <li>Cloud Security Architecture (AWS, Azure, GCP)</li>
-          <li>Penetration Testing & VAPT</li>
-          <li>Zero Trust Implementation</li>
-          <li>DevSecOps Integration</li>
-          <li>Threat Modelling & Risk Assessment</li>
-          <li>Identity & Access Management</li>
-          <li>Application Security Reviews</li>
-          <li>SOC Setup & Managed Security</li>
-          <li>Incident Response Planning</li>
-          {/* <li>Compliance & Governance (ISO 27001, GDPR)</li> */}
+          <li>Vertical SaaS Platform Development</li>
+          <li>Custom AI Application Development</li>
+          <li>Industry-Specific Model Fine-Tuning</li>
+          <li>AI-Native Product Architecture</li>
+          <li>Domain-Specific LLM Integration</li>
+          <li>Multi-Tenant SaaS Architecture</li>
+          <li>Workflow Automation & Orchestration</li>
+          <li>API-First Platform Design</li>
+          <li>Usage-Based Billing & Metering</li>
+          <li>Rapid MVP to Scale Development</li>
         </ul>
         <div className="tech-tags">
-         <span className="badge">NIST CSF</span><span className="badge">OWASP</span>
-          <span className="badge">CIS Benchmarks</span><span className="badge">SIEM</span><span className="badge">EDR</span>
+         <span className="badge">LangChain</span><span className="badge">OpenAI API</span>
+          <span className="badge">Vector DB</span><span className="badge">Multi-Tenant</span><span className="badge">Stripe Billing</span>
         </div>
       </div>
     </div>
@@ -188,57 +188,56 @@ export default function SolutionsContent() {
       <div className="sol-meta" data-anim="fade-left">
         <div className="sol-number">05 / 06</div>
         <h2 className="sol-title-lg">HCI & Adaptive Learning</h2>
-        <p className="sol-body">End-to-end infrastructure enabling brands to predict consumer behaviour, automate engagement, and secure transactions. We combine AI-powered analytics with robust commerce platforms to drive measurable business outcomes.</p>
-        <p className="sol-body">Built for retailers, marketplaces, and financial service providers navigating the future of intelligent commerce.</p>
+        <p className="sol-body">Human-Computer Interaction & Adaptive Learning is about building interfaces that adjust to the person using them, rather than asking people to adjust to the system. We design experiences that learn from behaviour in real time to become more usable, accessible, and effective with every interaction.</p>
+        <p className="sol-body">From enterprise software to educational platforms, our HCI practice combines human-centred design research with adaptive systems that personalise the experience for every individual user.</p>
         <Link href="/contact" className="sol-cta-link">Explore HCI & Adaptive Learning <span>→</span></Link>
       </div>
       <div data-anim="fade-right">
         <ul className="services-list">
-          <li>Predictive Customer Analytics</li>
-          <li>Personalisation & Recommendation Engines</li>
-          <li>Fraud Detection & Prevention</li>
-          <li>Customer Intelligence Platforms</li>
-          <li>Marketing Automation Systems</li>
-          <li>Retail Intelligence Dashboards</li>
-          <li>Payment Security Infrastructure</li>
-          <li>Inventory & Supply Chain AI</li>
-          <li>Customer Lifetime Value Modelling</li>
-          <li>Omnichannel Data Unification</li>
+          <li>Adaptive User Interface Design</li>
+          <li>Human-Centred Design Research</li>
+          <li>Accessibility & Inclusive Design (WCAG)</li>
+          <li>Personalised Learning Systems</li>
+          <li>Behavioural UX Analytics</li>
+          <li>Cognitive Load Optimisation</li>
+          <li>Adaptive Learning Platforms (EdTech)</li>
+          <li>Voice & Multimodal Interfaces</li>
+          <li>Usability Testing & Research</li>
+          <li>User Behaviour Modelling</li>
         </ul>
         <div className="tech-tags">
-          <span className="badge">ML Pipelines</span><span className="badge">Kafka</span><span className="badge">dbt</span>
-          <span className="badge">Snowflake</span><span className="badge">A/B Testing</span><span className="badge">PCI DSS</span>
+          <span className="badge">WCAG 2.2</span><span className="badge">Figma</span>
+          <span className="badge">Eye-Tracking</span><span className="badge">Reinforcement Learning</span><span className="badge">A/B Testing</span>
         </div>
       </div>
     </div>
   </section>
-
   {/* 06 EDGE AI */}
-  <section className="sol-section" id="RAI">
+ <section className="sol-section" id="RAI">
     <div className="sol-inner reverse">
       <div className="sol-meta" data-anim="fade-right">
         <div className="sol-number">06 / 06</div>
         <h2 className="sol-title-lg">RAI (Responsible AI) & SbD Systems.</h2>
-        <p className="sol-body">AI-powered connected environments that process, reason, and act at the edge — where decisions must happen in milliseconds and connectivity cannot be assumed. We build distributed intelligence systems for the physical world.</p>
-        <p className="sol-body">From smart cities to industrial manufacturing, our edge AI platforms bring intelligence to the devices, environments, and systems that matter most.</p>
+        <p className="sol-body">Responsible AI is the practice of building systems that are fair, transparent, and accountable by design — not audited for these qualities after deployment. We embed governance, oversight, and safety controls directly into the architecture from day one.</p>
+        <p className="sol-body">From bias auditing to regulatory alignment, our Responsible AI and Safety-by-Design practice helps organisations deploy AI systems that hold up to scrutiny — from regulators, from users, and from their own teams.</p>
         <Link href="/contact" className="sol-cta-link">Discuss SbD Systems.<span>→</span></Link>
       </div>
       <div data-anim="fade-left">
         <ul className="services-list">
-          <li>Edge AI Inference Platforms</li>
-          <li>Industrial IoT Architecture</li>
-          <li>Smart City Infrastructure</li>
-          <li>Autonomous Monitoring Systems</li>
-          <li>Connected Sensor Networks</li>
-          <li>Real-Time Decision Pipelines</li>
-          <li>Edge-to-Cloud Data Architectures</li>
-          <li>Predictive Analytics at the Edge</li>
-          <li>Healthcare IoT Systems</li>
-          <li>Energy Grid Intelligence</li>
+          <li>AI Governance Framework Design</li>
+          <li>Bias & Fairness Auditing</li>
+          <li>Model Explainability & Transparency</li>
+          <li>AI Risk & Impact Assessment</li>
+          <li>Safety-by-Design Architecture</li>
+          <li>Human-in-the-Loop Oversight Systems</li>
+          <li>Regulatory Compliance (EU AI Act, NIST AI RMF)</li>
+          <li>Adversarial Robustness Testing</li>
+          <li>AI Incident Response Planning</li>
+          <li>Ethical AI Review & Audit Boards</li>
         </ul>
         <div className="tech-tags">
-          <span className="badge">TensorFlow Lite</span><span className="badge">ONNX</span><span className="badge">MQTT</span>
-          <span className="badge">Edge Impulse</span><span className="badge">Raspberry Pi</span><span className="badge">NVIDIA Jetson</span>
+          <span className="badge">NIST AI RMF</span><span className="badge">EU AI Act</span>
+          <span className="badge">SHAP/LIME</span><span className="badge">Model Cards</span><span className="badge">Fairlearn</span>
         </div>
       </div>
     </div>
